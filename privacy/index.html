@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Приватність — Opir</title>
+<meta name="description" content="Які дані Opir зберігає, куди надсилає і чого не робить.">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Можливості</a>
+      <a href="../#cases">Сценарії</a>
+      <a href="../#assistant">Асистент</a>
+      <a href="../#standards">Стандарти</a>
+      <a href="../#faq">Питання</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Мова"><span class="on">UA</span><span>RU</span><span>EN</span></div>
+      <a class="btn phosphor small" href="../#get">Завантажити</a>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="wrap">
+    <div class="caps">Приватність</div>
+    <h1>Що Opir знає про вас</h1>
+    <p class="lead">Коротко: нічого зайвого. У застосунку немає реклами, лічильників і збирання статистики.</p>
+
+    <h2>Що лишається на вашому комп’ютері</h2>
+    <ul>
+      <li><b>Документи.</b> Схеми — це файли <code>.opir</code> там, де ви їх зберегли. Прикріплені даташити лежать усередині документа.</li>
+      <li><b>Розмови з асистентом.</b> Зберігаються окремо від документа, у теці застосунку на вашому Mac.</li>
+      <li><b>Ключ API.</b> Зберігається у зв’язці ключів macOS.</li>
+      <li><b>Ваша бібліотека.</b> Власні компоненти й форми рамок — у теці застосунку.</li>
+    </ul>
+
+    <h2>Що і куди надсилається</h2>
+    <div class="card">
+      <p><b>Лише коли ви питаєте асистента — і лише до моделі, яку ви обрали.</b></p>
+      <p>До запиту додаються ваше повідомлення, опис схеми (деталі, мережі, результати перевірки) і, якщо це ввімкнено в параметрах, зображення аркуша. Якщо асистент читає даташит, його сторінки теж ідуть до моделі.</p>
+    </div>
+    <ul>
+      <li><b>Хмарна модель</b> (Anthropic або сервіс, сумісний з OpenAI): дані йдуть на сервери цього сервісу і обробляються за його правилами. Ключ і тариф — ваші.</li>
+      <li><b>Локальна модель</b> (LM Studio, Ollama): запит не залишає вашого комп’ютера.</li>
+      <li><b>Без асистента</b> застосунок нікуди нічого не надсилає.</li>
+    </ul>
+
+    <h2>MCP</h2>
+    <p>Доступ для зовнішніх клієнтів типово вимкнено. Увімкнений сервер слухає лише <code>127.0.0.1</code>. Що клієнт робить зі схемою далі — визначає сам клієнт і його модель.</p>
+
+    <h2>Оновлення</h2>
+    <p>Коли з’явиться автоматичне оновлення, застосунок звертатиметься до opir.dev по список версій. Нічого, крім звичайного мережевого запиту, при цьому не передається.</p>
+
+    <h2>Цей сайт</h2>
+    <p>Сайт статичний: без кукі, без лічильників і сторонніх скриптів. Його розміщено на GitHub Pages; GitHub, як будь-який хостинг, бачить технічні дані запиту, зокрема IP-адресу.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Принципові схеми за ЄСКД</span>
+    <a href="../changelog/">Що нового</a>
+    <a href="../mcp/">Налаштування MCP</a>
+    <a href="../privacy/">Приватність</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opir — принципові схеми за ЄСКД для macOS</title>
+<meta name="description" content="Opir — редактор принципових електричних схем для macOS: креслення за ЄСКД, асистент, що збирає схему за описом, електрощити з таблицею груп.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="#what">Можливості</a>
+      <a href="#cases">Сценарії</a>
+      <a href="#assistant">Асистент</a>
+      <a href="#standards">Стандарти</a>
+      <a href="#faq">Питання</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Мова"><span class="on">UA</span><span>RU</span><span>EN</span></div>
+      <a class="btn phosphor small" href="#get">Завантажити</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Принципові схеми за ЄСКД.<br>Креслите ви — <em>допомагає асистент.</em></h1>
+    <p class="lead">Opir — редактор електричних схем для macOS. Бібліотека умовних позначень, рамка й основний напис, перелік елементів, електрощити з таблицею груп — і асистент, який збирає схему за описом.</p>
+    <div class="actions">
+      <span class="btn phosphor soon"><span class="tag">Скоро</span> Opir для macOS</span>
+      <a class="btn ghost" href="#what">Що вміє</a>
+    </div>
+    <p class="note">macOS 15 і новіше · українська, російська, англійська</p>
+  </div>
+</section>
+
+<div class="stage">
+  <div class="wrap">
+    <div class="window"><img src="images/window.jpg" width="1389" height="868" alt="Вікно Opir: схема електрощита на аркуші А3, бібліотека компонентів ліворуч, властивості аркуша праворуч"></div>
+  </div>
+</div>
+
+<section class="paper" id="what">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Що це</div>
+      <h2>Креслярська дошка, яка розуміє схему</h2>
+      <p>Opir знає, що з чим з’єднано: з’єднання — це мережі, а не просто лінії. Тому він сам веде перелік елементів, перевіряє схему і може говорити про неї з асистентом.</p>
+    </div>
+    <div class="pillars">
+      <div class="plate">
+        <div class="sign" aria-hidden="true">
+          <svg width="34" height="20" viewBox="0 0 34 20" fill="none" stroke="#1C1D26" stroke-width="1.6" stroke-linecap="round"><path d="M1 10h7M26 10h7"/><rect x="8" y="5" width="18" height="10"/></svg>
+        </div>
+        <h3>Креслення за ЄСКД</h3>
+        <p>Аркуш виглядає так, як його надрукують: чорне на білому, рамка, основний напис.</p>
+        <ul>
+          <li>Понад 140 умовних позначень, ГОСТ або IEC</li>
+          <li>Перелік елементів складається сам</li>
+          <li>Свої компоненти і форми рамок</li>
+        </ul>
+      </div>
+      <div class="plate ai">
+        <div class="sign ai" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="#B8F23A"><path d="M11 2l2.2 6.8L20 11l-6.8 2.2L11 20l-2.2-6.8L2 11l6.8-2.2z"/><path d="M20.5 15l1 3 3 1-3 1-1 3-1-3-3-1 3-1z"/></svg>
+        </div>
+        <h3>Асистент</h3>
+        <p>Опишіть схему словами — він підбере деталі, з’єднає їх і розставить на аркуші.</p>
+        <ul>
+          <li>Збирає схему за описом</li>
+          <li>Оцифровує фото старої схеми</li>
+          <li>Перевіряє і пояснює знайдене</li>
+        </ul>
+      </div>
+      <div class="plate">
+        <div class="sign" aria-hidden="true">
+          <svg width="22" height="34" viewBox="0 0 22 34" fill="none" stroke="#1C1D26" stroke-width="1.6" stroke-linecap="round"><path d="M11 1v8M11 25v8M11 25L3 11M8 6l6 6M14 6l-6 6"/></svg>
+        </div>
+        <h3>Електрощити</h3>
+        <p>Автомати, ПЗВ, реле, шини N і PE — і все, що треба монтажникові, на одному аркуші.</p>
+        <ul>
+          <li>Таблиця груп рахує струм і втрату напруги</li>
+          <li>Перерізи й кольори проводів</li>
+          <li>Перевірка «автомат захищає провід»</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="desk" id="cases">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Сценарії</div>
+      <h2>Як це виглядає в роботі</h2>
+      <p>Чотири задачі, які Opir закриває від початку до кінця.</p>
+    </div>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СЦЕНАРІЙ 01</div>
+        <h3>Щит квартири за одним запитом</h3>
+        <p>Три фази, лічильник, ПЗІП, реле напруги, три ПЗВ, вісім груп, резервний ввід через АВР. Асистент ставить апарати, з’єднує їх і заповнює дані ліній. Проводи креслите ви — або команда «Розвести мережу».</p>
+        <div class="ask"><b>Запит</b>Збери щит квартири. Ввід три фази 400 В, ввідний автомат C32, лічильник, ПЗІП, реле напруги. Три ПЗВ, вісім груп…</div>
+      </div>
+      <div class="shot fit"><img src="images/board.jpg" width="1800" height="1272" alt="Схема щита квартири, зібрана асистентом і розведена"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СЦЕНАРІЙ 02</div>
+        <h3>Таблиця груп, яка рахує сама</h3>
+        <p>Для кожної лінії — автомат, кабель, довжина й навантаження. Opir рахує струм, допустимий струм кабелю і втрату напруги та показує, де автомат не захищає провід.</p>
+      </div>
+      <div class="shot top"><img src="images/table.jpg" width="1060" height="1500" alt="Таблиця груп щита: автомати, кабелі, перерізи, струми і втрата напруги"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СЦЕНАРІЙ 03</div>
+        <h3>Перевірка схеми одним пробілом</h3>
+        <p>Непідключені виводи, дублі позначень, мережі з двома іменами, перевантажений ввід. Клацання по рядку показує місце на аркуші; вибрана мережа підсвічується цілком.</p>
+      </div>
+      <div class="shot"><img src="images/nets.jpg" width="1389" height="868" alt="Панель перевірки схеми під аркушем і список мереж праворуч"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СЦЕНАРІЙ 04</div>
+        <h3>Стара схема з фотографії</h3>
+        <p>Перетягніть фото зі старого журналу. Асистент прочитає деталі й мережі та поставить їх так, як на оригіналі. Проводи прокладаєте ви, звіряючись із картинкою: так схема стає зрозумілою, а помилку читання легко помітити.</p>
+        <div class="formats" aria-label="Експорт">
+          <span>PDF</span><span>SVG</span><span>PNG</span><span>KiCad</span><span>SPICE</span><span>JSON</span><span>CSV</span>
+        </div>
+      </div>
+      <div class="shot"><img src="images/digitise.jpg" width="1389" height="868" alt="Оцифрування: деталі стоять на картинці старої схеми, мережі показано пунктиром, асистент звітує про прочитане"></div>
+    </article>
+  </div>
+</section>
+
+<section class="assistant" id="assistant">
+  <div class="wrap cols">
+    <div>
+      <div class="caps">Асистент і MCP</div>
+      <h2>Ваша модель, ваші правила</h2>
+      <p class="lead">Асистент працює через модель, яку оберете ви, і бачить ту саму схему, що й ви: деталі, мережі, результати перевірки.</p>
+      <ul class="points">
+        <li><b>Хмарна або локальна модель</b><span>Anthropic, будь-який сервіс, сумісний з OpenAI, або локальна модель у LM Studio чи Ollama. З локальною схема не залишає комп’ютер.</span></li>
+        <li><b>Кожна правка — один крок скасування</b><span>Змінене асистентом підсвічується на аркуші зеленим. Не сподобалось — ⌘Z.</span></li>
+        <li><b>Чесно про межі</b><span>Що рахує програма, а що — оцінка самої моделі, асистент називає окремо.</span></li>
+        <li><b>MCP для Claude Desktop і Claude Code</b><span>Зовнішній клієнт працює з відкритим документом через локальний сервер, лише на 127.0.0.1.</span>
+<div class="code">{ <i>"mcpServers"</i>: { <i>"opir"</i>: { "command": "opir", "args": ["mcp"] } } }</div></li>
+      </ul>
+    </div>
+    <div class="panel"><img src="images/assistant.jpg" width="1389" height="868" alt="Панель асистента: відповідь із зауваженнями до щита"></div>
+  </div>
+</section>
+
+<section class="paper" id="standards">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Стандарти</div>
+      <h2>Що за стандартом, а що — довідково</h2>
+      <p>Програма для аматорів і ентузіастів не замінює проєктувальника. Тому ми прямо кажемо, на що можна спертися.</p>
+    </div>
+    <div class="honest">
+      <div class="plate">
+        <h3><span class="dot" style="background:#0E8F7A"></span>За текстом стандарту</h3>
+        <ul>
+          <li>Умовні позначення і літерні коди — ЄСКД</li>
+          <li>Рамка, основний напис, перелік елементів</li>
+          <li>Позначки кольорів проводів</li>
+        </ul>
+      </div>
+      <div class="plate">
+        <h3><span class="dot" style="background:#C77700"></span>Довідково, з посиланням</h3>
+        <ul>
+          <li>Допустимий струм кабелю — ПУЕ:2026, з номером таблиці</li>
+          <li>Втрата напруги в лінії</li>
+          <li>Сума навантажень і струм вводу</li>
+        </ul>
+      </div>
+      <div class="plate">
+        <h3><span class="dot" style="background:#8B8FA1"></span>Не перевіряється</h3>
+        <ul>
+          <li>Струми короткого замикання</li>
+          <li>Селективність захисту</li>
+          <li>Спільне прокладання і температура</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="get" style="padding-top:0">
+  <div class="wrap">
+    <div class="get">
+      <h2>Перший випуск готується</h2>
+      <p>Opir 1.0 вийде як звичайний застосунок для macOS: образ DMG, оновлення всередині програми.</p>
+      <span class="btn phosphor soon"><span class="tag">Скоро</span> Завантажити для macOS</span>
+      <div class="reqs"><span>macOS 15 і новіше</span><span>UA · RU · EN</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Питання</div>
+      <h2>Коротко про головне</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Чи потрібен асистент, щоб користуватися програмою?</summary>
+        <p>Ні. Це звичайний редактор схем: бібліотека, проводи, перевірка, друк. Асистент — помічник, його можна не вмикати зовсім.</p>
+      </details>
+      <details>
+        <summary>Куди потрапляє моя схема, коли я питаю асистента?</summary>
+        <p>До тієї моделі, яку ви обрали в налаштуваннях. З хмарним сервісом — на його сервери; з локальною моделлю схема залишається на вашому комп’ютері.</p>
+      </details>
+      <details>
+        <summary>Чому асистент не креслить проводи сам?</summary>
+        <p>Він з’єднує виводи мережами — їх видно пунктиром. Проводи прокладає людина: так схему легше читати й перевіряти. Одну мережу можна розвести командою.</p>
+      </details>
+      <details>
+        <summary>Чи можна перенести схему в KiCad?</summary>
+        <p>Так, як список з’єднань (netlist). Ще є експорт для SPICE, JSON і специфікація закупівлі в CSV.</p>
+      </details>
+      <details>
+        <summary>А плати?</summary>
+        <p>Ні. Opir — про принципові схеми і щити; розведення плат залишається професійним САПР.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Принципові схеми за ЄСКД</span>
+    <a href="changelog/">Що нового</a>
+    <a href="mcp/">Налаштування MCP</a>
+    <a href="privacy/">Приватність</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+</body>
+</html>

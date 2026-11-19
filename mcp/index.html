@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Налаштування MCP — Opir</title>
+<meta name="description" content="Як підключити Claude Desktop, Claude Code чи інший клієнт MCP до Opir.">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Можливості</a>
+      <a href="../#cases">Сценарії</a>
+      <a href="../#assistant">Асистент</a>
+      <a href="../#standards">Стандарти</a>
+      <a href="../#faq">Питання</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Мова"><span class="on">UA</span><span>RU</span><span>EN</span></div>
+      <a class="btn phosphor small" href="../#get">Завантажити</a>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="wrap">
+    <div class="caps">MCP</div>
+    <h1>Підключення зовнішнього асистента</h1>
+    <p class="lead">Opir має вбудований сервер MCP. Через нього Claude Desktop, Claude Code чи інший клієнт бачить відкриту схему і може її змінювати — так само, як вбудований асистент.</p>
+
+    <h2>Що для цього треба</h2>
+    <ul>
+      <li>Opir запущено, і в меню <b>Опір</b> увімкнено <b>«Дозволити доступ ШІ (MCP)»</b>. Типово доступ вимкнено.</li>
+      <li>Клієнт, який уміє MCP через stdio: Claude Desktop, Claude Code та інші.</li>
+    </ul>
+    <div class="card"><p>Сервер слухає лише <code>127.0.0.1</code> — до нього не дістатися з мережі. Клієнт запускає маленьку програму <code>opir mcp</code>, а вона передає запити застосунку.</p></div>
+
+    <h2>Кроки</h2>
+    <ol class="steps">
+      <li>
+        <h3>Увімкніть доступ</h3>
+        <p>Меню <b>Опір → Дозволити доступ ШІ (MCP)</b>. Той самий перемикач є в параметрах, у розділі «Зовнішні ШІ-клієнти».</p>
+      </li>
+      <li>
+        <h3>Додайте сервер у клієнт</h3>
+        <p><b>Claude Code</b> — одна команда в терміналі:</p>
+<pre>claude mcp add opir -- <i>/Applications/Opir.app/Contents/Helpers/opir</i> mcp</pre>
+        <p><b>Claude Desktop</b> — допишіть у файл <code>~/Library/Application Support/Claude/claude_desktop_config.json</code>:</p>
+<pre>{
+  <i>"mcpServers"</i>: {
+    <i>"opir"</i>: {
+      "command": "/Applications/Opir.app/Contents/Helpers/opir",
+      "args": ["mcp"]
+    }
+  }
+}</pre>
+        <p>Після цього перезапустіть клієнт.</p>
+      </li>
+      <li>
+        <h3>Перевірте</h3>
+        <p>Відкрийте схему в Opir і попросіть клієнта: «Які документи відкриті в Opir?». Він має назвати ваш документ.</p>
+      </li>
+    </ol>
+
+    <h2>Що вміє клієнт</h2>
+    <div class="tools">
+      <div class="card"><span class="caps">Читає</span>
+        <p>Схему з деталями, виводами й мережами; результати перевірки; зображення аркуша; список з’єднань; перелік елементів; таблицю груп щита; даташит деталі.</p></div>
+      <div class="card"><span class="caps">Змінює</span>
+        <p>Додає й переставляє деталі, з’єднує виводи мережами, називає мережі, задає перерізи й кольори проводів, додає аркуші, перелік і таблицю груп.</p></div>
+    </div>
+
+    <h2>Правила гри</h2>
+    <ul>
+      <li><b>Кожен виклик — один крок скасування.</b> Змінене підсвічується на аркуші; ⌘Z повертає як було.</li>
+      <li><b>Проводи креслить людина.</b> Клієнт з’єднує виводи мережами, їх видно пунктиром. Провести — вручну або командою «Розвести мережу».</li>
+      <li><b>Символів клієнт не вигадує.</b> Якщо в бібліотеці немає потрібної деталі, він називає, чого бракує, а не малює заміну.</li>
+      <li><b>Про чужі правки він дізнається.</b> Якщо ви або вбудований асистент змінили схему між його викликами, наступна відповідь сервера починається з переліку змін.</li>
+      <li><b>Файл на диску теж годиться.</b> Клієнт може працювати з документом <code>.opir</code> за шляхом, навіть коли застосунок закрито.</li>
+    </ul>
+
+    <h2>Якщо не працює</h2>
+    <ul>
+      <li><b>«Opir is not reachable»</b> — застосунок не запущено або доступ вимкнено в меню «Опір».</li>
+      <li><b>Клієнт не бачить сервера</b> — перевірте шлях до <code>opir</code> у налаштуваннях клієнта і перезапустіть його.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Принципові схеми за ЄСКД</span>
+    <a href="../changelog/">Що нового</a>
+    <a href="../mcp/">Налаштування MCP</a>
+    <a href="../privacy/">Приватність</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+</body>
+</html>
