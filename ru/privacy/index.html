@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Приватность — Opir</title>
+<meta name="description" content="Какие данные Opir хранит, куда отправляет и чего не делает.">
+<link rel="stylesheet" href="../../assets/site.css?v=1120g">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/privacy/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/privacy/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/privacy/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Возможности</a>
+      <a href="../#cases">Сценарии</a>
+      <a href="../#assistant">Ассистент</a>
+      <a href="../#standards">Стандарты</a>
+      <a href="../#faq">Вопросы</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Язык"><a href="/privacy/" hreflang="uk">UA</a><span class="on">RU</span><a href="/en/privacy/" hreflang="en">EN</a></div>
+      <a class="btn phosphor small" href="../#get">Скачать</a>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="wrap">
+    <div class="caps">Приватность</div>
+    <h1>Что Opir знает о вас</h1>
+    <p class="lead">Коротко: ничего лишнего. В приложении нет рекламы, счётчиков и сбора статистики.</p>
+
+    <h2>Что остаётся на вашем компьютере</h2>
+    <ul>
+      <li><b>Документы.</b> Схемы — это файлы <code>.opir</code> там, где вы их сохранили. Прикреплённые даташиты лежат внутри документа.</li>
+      <li><b>Разговоры с ассистентом.</b> Хранятся отдельно от документа, в папке приложения на вашем Mac.</li>
+      <li><b>Ключ API.</b> Хранится в связке ключей macOS.</li>
+      <li><b>Ваша библиотека.</b> Собственные компоненты и формы рамок — в папке приложения.</li>
+    </ul>
+
+    <h2>Что и куда отправляется</h2>
+    <div class="card">
+      <p><b>Только когда вы спрашиваете ассистента — и только к модели, которую вы выбрали.</b></p>
+      <p>К запросу добавляются ваше сообщение, описание схемы (детали, сети, результаты проверки) и, если это включено в настройках, изображение листа. Если ассистент читает даташит, его страницы тоже идут к модели.</p>
+    </div>
+    <ul>
+      <li><b>Облачная модель</b> (Anthropic или сервис, совместимый с OpenAI): данные идут на серверы этого сервиса и обрабатываются по его правилам. Ключ и тариф — ваши.</li>
+      <li><b>Локальная модель</b> (LM Studio, Ollama): запрос не покидает вашего компьютера.</li>
+      <li><b>Без ассистента</b> приложение никуда ничего не отправляет.</li>
+    </ul>
+
+    <h2>MCP</h2>
+    <p>Доступ для внешних клиентов по умолчанию выключен. Включённый сервер слушает только <code>127.0.0.1</code>. Что клиент делает со схемой дальше — определяет сам клиент и его модель.</p>
+
+    <h2>Обновления</h2>
+    <p>Когда появится автоматическое обновление, приложение будет обращаться к opir.dev за списком версий. Ничего, кроме обычного сетевого запроса, при этом не передаётся.</p>
+
+    <h2>Этот сайт</h2>
+    <p>Сайт статический: без куки, без счётчиков и сторонних скриптов. Он размещён на GitHub Pages; GitHub, как любой хостинг, видит технические данные запроса, в том числе IP-адрес.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Принципиальные схемы по ЕСКД</span>
+    <a href="../changelog/">Что нового</a>
+    <a href="../mcp/">Настройка MCP</a>
+    <a href="../privacy/">Приватность</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+</body>
+</html>

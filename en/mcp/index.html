@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP setup — Opir</title>
+<meta name="description" content="How to connect Claude Desktop, Claude Code or another MCP client to Opir.">
+<link rel="stylesheet" href="../../assets/site.css?v=1120g">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/mcp/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/mcp/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/mcp/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/mcp/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Features</a>
+      <a href="../#cases">Scenarios</a>
+      <a href="../#assistant">Assistant</a>
+      <a href="../#standards">Standards</a>
+      <a href="../#faq">Questions</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Language"><a href="/mcp/" hreflang="uk">UA</a><a href="/ru/mcp/" hreflang="ru">RU</a><span class="on">EN</span></div>
+      <a class="btn phosphor small" href="../#get">Download</a>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="wrap">
+    <div class="caps">MCP</div>
+    <h1>Connecting an outside assistant</h1>
+    <p class="lead">Opir has a built-in MCP server. Through it Claude Desktop, Claude Code or another client sees the open schematic and can change it — just as the built-in assistant does.</p>
+
+    <h2>What you need</h2>
+    <ul>
+      <li>Opir is running, and <b>Allow AI Access (MCP)</b> is turned on in the <b>Opir</b> menu. Access is off by default.</li>
+      <li>A client that speaks MCP over stdio: Claude Desktop, Claude Code and others.</li>
+    </ul>
+    <div class="card"><p>The server listens on <code>127.0.0.1</code> only — it cannot be reached from the network. The client starts a small program, <code>opir mcp</code>, which passes its requests to the app.</p></div>
+
+    <h2>Steps</h2>
+    <ol class="steps">
+      <li>
+        <h3>Turn access on</h3>
+        <p>The menu <b>Opir → Allow AI Access (MCP)</b>. The same switch is in Settings, under External AI clients.</p>
+      </li>
+      <li>
+        <h3>Add the server to the client</h3>
+        <p><b>Claude Code</b> — one command in the terminal:</p>
+<pre>claude mcp add opir -- <i>/Applications/Opir.app/Contents/Helpers/opir</i> mcp</pre>
+        <p><b>Claude Desktop</b> — add this to the file <code>~/Library/Application Support/Claude/claude_desktop_config.json</code>:</p>
+<pre>{
+  <i>"mcpServers"</i>: {
+    <i>"opir"</i>: {
+      "command": "/Applications/Opir.app/Contents/Helpers/opir",
+      "args": ["mcp"]
+    }
+  }
+}</pre>
+        <p>Then restart the client.</p>
+      </li>
+      <li>
+        <h3>Check</h3>
+        <p>Open a schematic in Opir and ask the client: “Which documents are open in Opir?” It should name your document.</p>
+      </li>
+    </ol>
+
+    <h2>What the client can do</h2>
+    <div class="tools">
+      <div class="card"><span class="caps">Reads</span>
+        <p>The schematic with its parts, pins and nets; check results; a picture of the sheet; the netlist; the parts list; a switchboard’s table of groups; a part’s datasheet.</p></div>
+      <div class="card"><span class="caps">Changes</span>
+        <p>Adds and moves parts, joins pins with nets, names nets, sets wire sections and colours, adds sheets, a parts list and a table of groups.</p></div>
+    </div>
+
+    <h2>The rules</h2>
+    <ul>
+      <li><b>Every call is one undo step.</b> What changed is highlighted on the sheet; ⌘Z puts it back.</li>
+      <li><b>A person draws the wires.</b> The client joins pins with nets, shown as dashed lines. Wire them by hand or with the Route Net command.</li>
+      <li><b>The client invents no symbols.</b> If the library lacks a part, it says what is missing instead of drawing a stand-in.</li>
+      <li><b>It learns of others’ edits.</b> If you or the built-in assistant changed the schematic between its calls, the server’s next answer opens with a list of the changes.</li>
+      <li><b>A file on disk will do too.</b> The client can work with an <code>.opir</code> document by its path, even when the app is closed.</li>
+    </ul>
+
+    <h2>If it does not work</h2>
+    <ul>
+      <li><b>“Opir is not reachable”</b> — the app is not running, or access is off in the Opir menu.</li>
+      <li><b>The client does not see the server</b> — check the path to <code>opir</code> in the client’s settings and restart it.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Schematic diagrams, drawn to standard</span>
+    <a href="../changelog/">What’s new</a>
+    <a href="../mcp/">MCP setup</a>
+    <a href="../privacy/">Privacy</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+</body>
+</html>
