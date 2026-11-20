@@ -180,7 +180,7 @@ section.paper { padding: 92px 0; }
   background-blend-mode: soft-light, normal;
   padding: 96px 0;
 }
-.assistant .cols { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
+.assistant .cols { display: grid; grid-template-columns: 0.88fr 1.12fr; gap: 48px; align-items: center; }
 /* A grid cell is as wide as its longest unbroken line unless told otherwise:
    the one-line config below would push the whole page wider than a phone. */
 .assistant .cols > *, .points li { min-width: 0; }
@@ -196,11 +196,14 @@ section.paper { padding: 92px 0; }
   font: 13px/1.6 var(--mono); color: #C9CCDA; overflow-x: auto; white-space: pre;
 }
 .code i { font-style: normal; color: var(--phosphor); }
-.panel {
-  border-radius: 16px; overflow: hidden; border: 1px solid var(--rule);
-  box-shadow: 0 0 60px rgba(184,242,58,0.10), 0 24px 60px rgba(0,0,0,0.45);
+/* The assistant's own window, whole. Its corners are round and white beyond them in the shot: the cut follows the
+   width (cqw), so it lies inside the window's corner at any size. */
+.panel { container-type: inline-size; }
+.panel .chat {
+  border-radius: 4.8cqw; overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.6), 0 0 60px rgba(184,242,58,0.10), 0 24px 60px rgba(0,0,0,0.45);
 }
-.panel img { width: 100%; aspect-ratio: 9 / 13; object-fit: cover; object-position: 100% 50%; }
+.panel img { width: 100%; height: auto; }
 
 /* ——— Standards ——— */
 .honest { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
@@ -246,7 +249,6 @@ footer .right { margin-left: auto; font-family: var(--mono); font-size: 12.5px; 
   .pillars, .honest, .assistant .cols { grid-template-columns: 1fr; }
   .sheet { grid-template-columns: 1fr; padding: 24px; gap: 22px; }
   .sheet:nth-of-type(even) .words { order: 0; }
-  .panel img { aspect-ratio: 4 / 5; }
   .get { padding: 40px 22px; }
   footer .right { margin-left: 0; }
 }
