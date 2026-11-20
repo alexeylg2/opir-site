@@ -176,6 +176,9 @@ section.paper { padding: 92px 0; }
   padding: 96px 0;
 }
 .assistant .cols { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
+/* A grid cell is as wide as its longest unbroken line unless told otherwise:
+   the one-line config below would push the whole page wider than a phone. */
+.assistant .cols > *, .points li { min-width: 0; }
 .assistant .caps { color: var(--phosphor); }
 .assistant h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.12; font-weight: 700; margin: 12px 0 16px; }
 .assistant .lead { color: var(--muted-on-graphite); font-size: 19px; }
@@ -242,6 +245,12 @@ footer .right { margin-left: auto; font-family: var(--mono); font-size: 12.5px; 
   .get { padding: 40px 22px; }
   footer .right { margin-left: 0; }
 }
+@media (max-width: 380px) {
+  .wrap { padding: 0 16px; }
+  .top .wrap { gap: 12px; }
+  .top .right { gap: 10px; }
+  .btn.small { padding: 7px 10px; }
+}
 
 /* ——— Inner pages: a column of text on tracing paper ——— */
 .page { padding: 64px 0 96px; }
@@ -254,7 +263,7 @@ footer .right { margin-left: auto; font-family: var(--mono); font-size: 12.5px; 
 .page ul, .page ol { margin: 12px 0 0; padding-left: 22px; }
 .page li { margin: 6px 0; }
 .page li::marker { color: var(--violet); }
-.page code { font: 0.9em var(--mono); background: #fff; border: 1px solid var(--edge); border-radius: 5px; padding: 1px 5px; }
+.page code { font: 0.9em var(--mono); background: #fff; border: 1px solid var(--edge); border-radius: 5px; padding: 1px 5px; overflow-wrap: anywhere; }
 .page pre {
   margin: 14px 0 0; padding: 16px 18px; border-radius: 12px; overflow-x: auto;
   background: var(--graphite); color: #C9CCDA; font: 13.5px/1.6 var(--mono);
