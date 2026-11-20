@@ -142,28 +142,26 @@ section.paper { padding: 92px 0; }
 .desk .caps { color: #D5D8E8; }
 .sheet {
   display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: center;
-  padding: 40px; margin-bottom: 26px; border-radius: 6px;
-  background-color: #fff;
-  background-image:
-    linear-gradient(var(--grid-major) 1px, transparent 1px), linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
-    linear-gradient(var(--grid-minor) 1px, transparent 1px), linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
-  background-size: 60px 60px, 60px 60px, 12px 12px, 12px 12px;
-  box-shadow: 0 2px 7px rgba(18,20,41,0.4), 0 18px 40px rgba(18,20,41,0.18);
+  padding: 40px; margin-bottom: 26px; border-radius: 14px;
+  /* Dark, grained graphite, the app's own header: a white sheet of a drawing stands out on it by itself. */
+  color: var(--on-graphite);
+  background: var(--grain), linear-gradient(var(--graphite-top), var(--graphite));
+  background-blend-mode: soft-light, normal;
+  box-shadow: 0 0 0 1px rgba(12,13,20,0.5), 0 2px 7px rgba(18,20,41,0.4), 0 18px 40px rgba(18,20,41,0.22);
 }
 .sheet:nth-of-type(even) .words { order: 2; }
-/* What lies on the squared paper is lifted off it by a light shadow, or the text and the pictures run into the grid. */
-.sheet .words, .shot { box-shadow: 0 1px 2px rgba(18,20,41,0.16), 0 6px 18px rgba(18,20,41,0.13); }
-.sheet .words { background: #fff; padding: 22px 24px; border-radius: 8px; border: 1px solid var(--edge-strong); }
-.sheet .no { font: 600 12px/1 var(--mono); letter-spacing: 0.08em; color: var(--caps); }
-.sheet h3 { font-size: 26px; line-height: 1.15; font-weight: 700; margin: 12px 0 10px; }
-.sheet p { color: var(--subtitle); }
+.sheet .no { font: 600 12px/1 var(--mono); letter-spacing: 0.08em; color: var(--phosphor); }
+.sheet h3 { font-size: 26px; line-height: 1.15; font-weight: 700; margin: 12px 0 10px; color: #fff; }
+.sheet p { color: #C4C7D4; }
 .sheet .ask {
   margin-top: 16px; padding: 12px 14px; border-radius: 12px; font-size: 14.5px; line-height: 1.45;
-  background: var(--graphite); color: var(--on-graphite);
+  background: var(--sunken); border: 1px solid var(--rule); color: var(--on-graphite);
 }
 .sheet .ask b { display: block; font: 600 11px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--phosphor); margin-bottom: 7px; }
-.shot { border: 1px solid var(--edge-strong); border-radius: 8px; overflow: hidden; background: #fff; }
+.shot { border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.45); }
 .shot img { width: 100%; height: auto; }
+/* A shot of a whole window: cut inside the window's own round corners, as on the main one. */
+.shot:not(.fit):not(.top):not(.todo) { border-radius: 2% / 3.2%; }
 .shot.top img { aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 0; }
 .shot.fit img { aspect-ratio: 1800 / 1272; object-fit: contain; }
 .shot.todo {
