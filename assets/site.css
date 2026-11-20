@@ -19,6 +19,7 @@
   --phosphor: #B8F23A;
   --phosphor-deep: #4F7A12;
   --violet: #8B3FD9;
+  --violet-on-graphite: #A873F2; /* the same violet, lifted to read on the dark */
   --grid-minor: #E4ECF6;
   --grid-major: #C4D5EA;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -88,6 +89,7 @@ p { margin: 0; text-wrap: pretty; }
 }
 .hero h1 { font-size: clamp(34px, 5.6vw, 62px); line-height: 1.06; font-weight: 700; letter-spacing: -0.03em; }
 .hero h1 em { font-style: normal; color: var(--phosphor); }
+.hero h1 b { font-weight: inherit; color: var(--violet-on-graphite); }
 .hero .lead { max-width: 660px; margin: 22px auto 0; font-size: 20px; line-height: 1.5; color: var(--muted-on-graphite); }
 .hero .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
 .hero .note { margin-top: 18px; font: 13px/1.4 var(--mono); color: #7b8092; }
