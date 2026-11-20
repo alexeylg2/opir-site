@@ -151,7 +151,9 @@ section.paper { padding: 92px 0; }
   box-shadow: 0 2px 7px rgba(18,20,41,0.4), 0 18px 40px rgba(18,20,41,0.18);
 }
 .sheet:nth-of-type(even) .words { order: 2; }
-.sheet .words { background: rgba(255,255,255,0.9); padding: 14px 16px; border-radius: 6px; }
+/* What lies on the squared paper is lifted off it by a light shadow, or the text and the pictures run into the grid. */
+.sheet .words, .shot { box-shadow: 0 1px 2px rgba(18,20,41,0.16), 0 6px 18px rgba(18,20,41,0.13); }
+.sheet .words { background: #fff; padding: 22px 24px; border-radius: 8px; border: 1px solid var(--edge-strong); }
 .sheet .no { font: 600 12px/1 var(--mono); letter-spacing: 0.08em; color: var(--caps); }
 .sheet h3 { font-size: 26px; line-height: 1.15; font-weight: 700; margin: 12px 0 10px; }
 .sheet p { color: var(--subtitle); }
