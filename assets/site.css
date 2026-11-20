@@ -102,7 +102,10 @@ p { margin: 0; text-wrap: pretty; }
 }
 .window {
   margin-top: -200px; position: relative;
-  border-radius: 14px; overflow: hidden;
+  /* The shot is a real window with its own round corners and white beyond them.
+     The radius follows the picture's width (28 of 1389 px), so the cut always
+     lies inside the window's corner and no white shows at any size. */
+  border-radius: 2% / 3.2%; overflow: hidden;
   box-shadow: 0 0 0 1px rgba(12,13,20,0.55), 0 30px 70px rgba(15,17,34,0.5), 0 8px 20px rgba(15,17,34,0.3);
 }
 
@@ -238,7 +241,7 @@ footer .right { margin-left: auto; font-family: var(--mono); font-size: 12.5px; 
   .top nav { display: none; }
   .hero { padding: 60px 0 150px; }
   .hero .lead { font-size: 18px; }
-  .window { margin-top: -110px; border-radius: 9px; }
+  .window { margin-top: -110px; }
   section.paper, .desk, .assistant { padding: 64px 0; }
   .pillars, .honest, .assistant .cols { grid-template-columns: 1fr; }
   .sheet { grid-template-columns: 1fr; padding: 24px; gap: 22px; }
