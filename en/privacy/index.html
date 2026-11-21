@@ -57,7 +57,8 @@
       <p>The request carries your message, a description of the schematic (parts, nets, check results) and, if that is turned on in Settings, a picture of the sheet. If the assistant reads a datasheet, its pages go to the model too.</p>
     </div>
     <ul>
-      <li><b>A cloud model</b> (Anthropic or an OpenAI-compatible service): the data goes to that service’s servers and is handled under its terms. The key and the plan are yours.</li>
+      <li><b>An online service</b> — your choice of Anthropic (Claude), OpenAI or a service compatible with the OpenAI API: the data goes to that service’s servers and is handled under its terms. The key and the plan are yours.</li>
+      <li><b>Your permission first.</b> Before the first request to an online service Opir asks for permission and names what will go: your messages, the schematic, sheet images, attached pictures and datasheets. You can take it back in <b>Settings → Assistant → Sending to the service → Revoke</b>.</li>
       <li><b>A local model</b> (LM Studio, Ollama): the request never leaves your computer.</li>
       <li><b>Without the assistant</b> the app sends nothing anywhere.</li>
     </ul>
@@ -66,7 +67,7 @@
     <p>Access for outside clients is off by default. When on, the server listens on <code>127.0.0.1</code> only. What a client does with the schematic next is up to the client and its model.</p>
 
     <h2>Updates</h2>
-    <p>Once automatic updates arrive, the app will ask opir.dev for the list of versions. Nothing but an ordinary network request is sent.</p>
+    <p>A copy downloaded from opir.dev asks for the list of versions at <code>https://opir.dev/appcast.xml</code> once a day — if you agreed to that on the second launch — and downloads a new version from GitHub Releases (<code>github.com/alexeylg2/opir-site</code>). Nothing but an ordinary network request is sent. A copy from the Mac App Store is updated by the App Store itself: Opir contacts nothing for that.</p>
 
     <h2>This site</h2>
     <p>The site is static: no cookies, no trackers, no third-party scripts. It is hosted on GitHub Pages; GitHub, like any host, sees the technical details of a request, the IP address among them.</p>
