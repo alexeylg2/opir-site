@@ -58,6 +58,8 @@
       </li>
       <li>
         <h3>Add the server to the client</h3>
+        <p><b>The easiest way</b> is a button in the app: <b>Opir → Settings… → External AI clients → Copy Client Configuration</b>. It puts ready JSON for the client on the clipboard, with the exact path to <code>opir</code>, even if the app is not in Applications. Paste it into the client’s settings.</p>
+        <p>Or by hand.</p>
         <p><b>Claude Code</b> — one command in the terminal:</p>
 <pre>claude mcp add opir -- <i>/Applications/Opir.app/Contents/Helpers/opir</i> mcp</pre>
         <p><b>Claude Desktop</b> — add this to the file <code>~/Library/Application Support/Claude/claude_desktop_config.json</code>:</p>
@@ -90,7 +92,7 @@
       <li><b>Every call is one undo step.</b> What changed is highlighted on the sheet; ⌘Z puts it back.</li>
       <li><b>A person draws the wires.</b> The client joins pins with nets, shown as dashed lines. Wire them by hand or with the Route Net command.</li>
       <li><b>The client invents no symbols.</b> If the library lacks a part, it says what is missing instead of drawing a stand-in.</li>
-      <li><b>It learns of others’ edits.</b> If you or the built-in assistant changed the schematic between its calls, the server’s next answer opens with a list of the changes.</li>
+      <li><b>It learns of others’ edits.</b> If you, the built-in assistant or another AI client connected at the same time changed the schematic between its calls, the server’s next answer opens with a list of the changes.</li>
       <li><b>A file on disk will do too.</b> The client can work with an <code>.opir</code> document by its path, even when the app is closed.</li>
     </ul>
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sparkle's update feed for Opir. Items are added by scripts/publish-release.sh; do not edit by hand. -->
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Opir</title>
+    <link>https://opir.dev/</link>
+    <language>uk</language>
+    <!-- items, newest first -->
+  </channel>
+</rss>
