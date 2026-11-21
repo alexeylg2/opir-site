@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What’s new — Opir</title>
-<meta name="description" content="Opir’s release history.">
-<link rel="stylesheet" href="../../assets/site.css?v=1121b">
+<title>Journal — Opir</title>
+<meta name="description" content="Opir’s journal of changes: what is new in the app, what has changed and what is fixed.">
+<link rel="stylesheet" href="../../assets/site.css?v=1121c">
 <link rel="alternate" hreflang="uk" href="https://opir.dev/changelog/">
 <link rel="alternate" hreflang="ru" href="https://opir.dev/ru/changelog/">
 <link rel="alternate" hreflang="en" href="https://opir.dev/en/changelog/">
@@ -28,6 +28,7 @@
       <a href="../#assistant">Assistant</a>
       <a href="../#standards">Standards</a>
       <a href="../#faq">Questions</a>
+      <a href="../changelog/">Journal</a>
     </nav>
     <div class="right">
       <div class="langs" aria-label="Language"><a href="/changelog/" hreflang="uk">UA</a><a href="/ru/changelog/" hreflang="ru">RU</a><span class="on">EN</span></div>
@@ -38,9 +39,87 @@
 
 <main class="page">
   <div class="wrap">
-    <div class="caps">Releases</div>
-    <h1>What’s new</h1>
-    <p class="lead">The release history will appear here. Updates will arrive in the app itself.</p>
+    <div class="caps">Changes to the app</div>
+    <h1>Journal</h1>
+    <p class="lead">What is new in the app, what has changed and what is fixed. Opir is not released yet, so for now this is a journal of its making, day by day. After the first release the entries will go by version.</p>
+
+    <!-- journal -->
+    <article class="entry">
+      <time datetime="2026-11-21">21 November 2026</time>
+      <ul>
+        <li><b class="kind changed">Changed</b><span>The start window and a document’s window appear and go at once, without the system’s animation.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-20">20 November 2026</time>
+      <ul>
+        <li><b class="kind changed">Changed</b><span>Ground and Supply are two separate toolbar buttons again. The kind of ground is chosen in the sign’s properties.</span></li>
+        <li><b class="kind fixed">Fixed</b><span>The tooltips of the toolbar buttons are back.</span></li>
+        <li><b class="kind fixed">Fixed</b><span>The name of a turned supply sign no longer runs over the sign.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-19">19 November 2026</time>
+      <ul>
+        <li><b class="kind new">New</b><span>Library: the first batch of semiconductors — diode and LED sets, Darlington pairs, MOSFETs with their body diode.</span></li>
+        <li><b class="kind new">New</b><span>Route Net is in the Schematic menu and on ⌥⌘R: the net picked is routed with wires.</span></li>
+        <li><b class="kind new">New</b><span>The texture of the desk under the sheet is a choice in Settings: none, grain, paper, felt or canvas.</span></li>
+        <li><b class="kind changed">Changed</b><span>New interface colours: a graphite window header, violet for what is selected, phosphor for the assistant’s edits.</span></li>
+        <li><b class="kind changed">Changed</b><span>Every document opens in a window of its own; there are no tabs any more.</span></li>
+        <li><b class="kind changed">Changed</b><span>A new document opens on the assistant, which asks what circuit to build.</span></li>
+        <li><b class="kind fixed">Fixed</b><span>A net picked in the list comes into view whole. A single sheet can be printed alone.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-18">18 November 2026</time>
+      <ul>
+        <li><b class="kind new">New</b><span>Library: the first batch of passive parts. A resistor’s power is marked inside its body.</span></li>
+        <li><b class="kind changed">Changed</b><span>A net has one name: several names on one net are reported by the check.</span></li>
+        <li><b class="kind changed">Changed</b><span>The wire picked is darker than the rest of its net.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-17">17 November 2026</time>
+      <ul>
+        <li><b class="kind new">New</b><span>A wire can be given a colour.</span></li>
+        <li><b class="kind new">New</b><span>An outgoing line: an arrow where a line leaves the schematic.</span></li>
+        <li><b class="kind new">New</b><span>A tap of Space shows or hides the check of the schematic.</span></li>
+        <li><b class="kind changed">Changed</b><span>What is selected glows: a halo lies under its lines, and a net picked is lit whole.</span></li>
+        <li><b class="kind changed">Changed</b><span>The assistant knows what you changed on the schematic between its answers.</span></li>
+        <li><b class="kind fixed">Fixed</b><span>A name written on a wire goes with the wire.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-16">16 November 2026</time>
+      <ul>
+        <li><b class="kind new">New</b><span>Switchboards: the library has breakers, switch-disconnectors, residual-current devices, contactors, relays, surge protection, meters and transfer switches.</span></li>
+        <li><b class="kind new">New</b><span>A wire has a section and a material, written beside the line.</span></li>
+        <li><b class="kind new">New</b><span>A breaker’s line and the table of groups. A board’s lines are checked against PUE:2026, the Ukrainian wiring rules.</span></li>
+        <li><b class="kind new">New</b><span>A bus, the line of group connection of GOST 2.721. A wire enters it with a 45° break.</span></li>
+        <li><b class="kind new">New</b><span>The assistant builds switchboard schematics, and the check looks at a board as a whole.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-13">13 November 2026</time>
+      <ul>
+        <li><b class="kind new">New</b><span>A datasheet inside the document: drop a PDF on a part. The assistant reads it and goes by it.</span></li>
+        <li><b class="kind new">New</b><span>The assistant can stand in a window of its own.</span></li>
+        <li><b class="kind new">New</b><span>Symbol editor: a new symbol in the form of another, a grid step, zoom and turning. In drawing: arrows, ovals and rounded corners.</span></li>
+        <li><b class="kind changed">Changed</b><span>The assistant makes up no symbols: if the library lacks one, it stops and says what is missing.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-10">10 November 2026</time>
+      <ul>
+        <li><b class="kind new">New</b><span>The app is named Opir.</span></li>
+        <li><b class="kind new">New</b><span>The interface in Ukrainian. The language is chosen in Settings.</span></li>
+        <li><b class="kind new">New</b><span>Find on the schematic (⌘F), PNG export, several parts edited at once.</span></li>
+        <li><b class="kind changed">Changed</b><span>A net is drawn whole on its sheet, and the list of nets follows the sheet.</span></li>
+      </ul>
+    </article>
+    <!-- /journal -->
+
+    <h2>The first release</h2>
 
     <div class="release">
       <div class="when">In the works</div>
@@ -69,7 +148,7 @@
       <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
     </svg>
     <span>Schematic diagrams, drawn to standard</span>
-    <a href="../changelog/">What’s new</a>
+    <a href="../changelog/">Journal</a>
     <a href="../mcp/">MCP setup</a>
     <a href="../privacy/">Privacy</a>
     <span class="right">opir.dev</span>

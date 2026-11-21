@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Что нового — Opir</title>
-<meta name="description" content="История версий Opir.">
-<link rel="stylesheet" href="../../assets/site.css?v=1121b">
+<title>Журнал — Opir</title>
+<meta name="description" content="Журнал изменений Opir: что в приложении нового, что изменено и что исправлено.">
+<link rel="stylesheet" href="../../assets/site.css?v=1121c">
 <link rel="alternate" hreflang="uk" href="https://opir.dev/changelog/">
 <link rel="alternate" hreflang="ru" href="https://opir.dev/ru/changelog/">
 <link rel="alternate" hreflang="en" href="https://opir.dev/en/changelog/">
@@ -28,6 +28,7 @@
       <a href="../#assistant">Ассистент</a>
       <a href="../#standards">Стандарты</a>
       <a href="../#faq">Вопросы</a>
+      <a href="../changelog/">Журнал</a>
     </nav>
     <div class="right">
       <div class="langs" aria-label="Язык"><a href="/changelog/" hreflang="uk">UA</a><span class="on">RU</span><a href="/en/changelog/" hreflang="en">EN</a></div>
@@ -38,9 +39,87 @@
 
 <main class="page">
   <div class="wrap">
-    <div class="caps">Версии</div>
-    <h1>Что нового</h1>
-    <p class="lead">Здесь будет появляться история выпусков. Обновления будут приходить в само приложение.</p>
+    <div class="caps">Изменения в приложении</div>
+    <h1>Журнал</h1>
+    <p class="lead">Что в приложении нового, что изменено и что исправлено. Opir ещё не выпущен, поэтому пока это журнал разработки по дням. После первого выпуска записи пойдут по версиям.</p>
+
+    <!-- journal -->
+    <article class="entry">
+      <time datetime="2026-11-21">21 ноября 2026</time>
+      <ul>
+        <li><b class="kind changed">Изменено</b><span>Стартовое окно и окно документа появляются и исчезают сразу, без системной анимации.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-20">20 ноября 2026</time>
+      <ul>
+        <li><b class="kind changed">Изменено</b><span>«Земля» и «Питание» — снова две отдельные кнопки на панели инструментов. Вид земли выбирается в свойствах знака.</span></li>
+        <li><b class="kind fixed">Исправлено</b><span>Подсказки над кнопками панели инструментов вернулись.</span></li>
+        <li><b class="kind fixed">Исправлено</b><span>Название повёрнутого знака питания больше не наезжает на сам знак.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-19">19 ноября 2026</time>
+      <ul>
+        <li><b class="kind new">Новое</b><span>Библиотека: первая партия полупроводников — диодные и светодиодные сборки, пары Дарлингтона, полевые транзисторы со встроенным диодом.</span></li>
+        <li><b class="kind new">Новое</b><span>«Развести сеть» есть в меню «Схема» и вызывается клавишами ⌥⌘R: выбранная сеть разводится проводами.</span></li>
+        <li><b class="kind new">Новое</b><span>Фактуру стола под листом можно выбрать в настройках: без фактуры, зерно, бумага, фетр или холст.</span></li>
+        <li><b class="kind changed">Изменено</b><span>Новые цвета интерфейса: графитовый заголовок окна, фиолетовый для выбранного, фосфорный для правок ассистента.</span></li>
+        <li><b class="kind changed">Изменено</b><span>Каждый документ открывается в собственном окне, вкладок больше нет.</span></li>
+        <li><b class="kind changed">Изменено</b><span>Новый документ открывается на ассистенте, который спрашивает, какую схему составить.</span></li>
+        <li><b class="kind fixed">Исправлено</b><span>Сеть, выбранная в списке, показывается на листе целиком. Один лист можно напечатать отдельно.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-18">18 ноября 2026</time>
+      <ul>
+        <li><b class="kind new">Новое</b><span>Библиотека: первая партия пассивных компонентов. Мощность резистора обозначается в его корпусе.</span></li>
+        <li><b class="kind changed">Изменено</b><span>У сети одно имя: на несколько имён в одной сети указывает проверка схемы.</span></li>
+        <li><b class="kind changed">Изменено</b><span>Выбранный провод темнее остальной своей сети.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-17">17 ноября 2026</time>
+      <ul>
+        <li><b class="kind new">Новое</b><span>Проводу можно задать цвет.</span></li>
+        <li><b class="kind new">Новое</b><span>Отходящая линия: стрелка там, где линия уходит за пределы схемы.</span></li>
+        <li><b class="kind new">Новое</b><span>Пробел показывает и прячет проверку схемы.</span></li>
+        <li><b class="kind changed">Изменено</b><span>Выбранное светится: под линиями лежит ореол, а выбранная сеть подсвечивается целиком.</span></li>
+        <li><b class="kind changed">Изменено</b><span>Ассистент знает, что вы изменили на схеме между его ответами.</span></li>
+        <li><b class="kind fixed">Исправлено</b><span>Имя, написанное на проводе, удаляется вместе с проводом.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-16">16 ноября 2026</time>
+      <ul>
+        <li><b class="kind new">Новое</b><span>Электрощиты: в библиотеке автоматы, выключатели нагрузки, УЗО, контакторы, реле, защита от перенапряжений, счётчики, переключатели ввода.</span></li>
+        <li><b class="kind new">Новое</b><span>У провода есть сечение и материал, они пишутся рядом с линией.</span></li>
+        <li><b class="kind new">Новое</b><span>Линия автомата и таблица групп. Линии щита проверяются по ПУЕ:2026.</span></li>
+        <li><b class="kind new">Новое</b><span>Шина — линия групповой связи по ГОСТ 2.721. Провод входит в неё с изломом под 45°.</span></li>
+        <li><b class="kind new">Новое</b><span>Ассистент составляет схемы щитов, а проверка оценивает щит в целом.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-13">13 ноября 2026</time>
+      <ul>
+        <li><b class="kind new">Новое</b><span>Даташит в составе документа: перетащите PDF на компонент. Ассистент читает его и опирается на него.</span></li>
+        <li><b class="kind new">Новое</b><span>Ассистента можно вынести в отдельное окно.</span></li>
+        <li><b class="kind new">Новое</b><span>Редактор символов: новый символ на основе другого, шаг сетки, масштаб и поворот. В рисовании — стрелки, овалы и скруглённые углы.</span></li>
+        <li><b class="kind changed">Изменено</b><span>Ассистент не выдумывает символы: если нужного нет в библиотеке, он останавливается и говорит, чего не хватает.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-10">10 ноября 2026</time>
+      <ul>
+        <li><b class="kind new">Новое</b><span>Приложение получило имя Opir.</span></li>
+        <li><b class="kind new">Новое</b><span>Интерфейс на украинском. Язык выбирается в настройках.</span></li>
+        <li><b class="kind new">Новое</b><span>Поиск на схеме (⌘F), экспорт в PNG, правка нескольких компонентов сразу.</span></li>
+        <li><b class="kind changed">Изменено</b><span>Сеть рисуется на листе целиком, а список сетей следует за листом.</span></li>
+      </ul>
+    </article>
+    <!-- /journal -->
+
+    <h2>Первый выпуск</h2>
 
     <div class="release">
       <div class="when">Готовится</div>
@@ -69,7 +148,7 @@
       <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
     </svg>
     <span>Принципиальные схемы по ЕСКД</span>
-    <a href="../changelog/">Что нового</a>
+    <a href="../changelog/">Журнал</a>
     <a href="../mcp/">Настройка MCP</a>
     <a href="../privacy/">Приватность</a>
     <span class="right">opir.dev</span>

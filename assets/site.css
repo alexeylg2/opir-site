@@ -288,6 +288,21 @@ footer .right { margin-left: auto; font-family: var(--mono); font-size: 12.5px; 
 .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
 .tools .card { margin-top: 0; }
 .tools .caps { display: block; margin-bottom: 8px; }
+/* The journal: a day, and what changed on it. */
+.entry { display: grid; grid-template-columns: 168px 1fr; gap: 10px 24px; padding: 24px 0; border-top: 1px solid var(--edge); }
+.entry:first-of-type { margin-top: 36px; }
+.entry time { font: 600 12.5px/1.7 var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--subtitle); padding-top: 2px; }
+.page .entry ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.page .entry li { margin: 0; display: grid; grid-template-columns: 104px 1fr; gap: 14px; align-items: baseline; }
+.kind { justify-self: start; font: 600 11px/1 var(--mono); letter-spacing: 0.05em; text-transform: uppercase; padding: 5px 8px; border-radius: 5px; white-space: nowrap; }
+.kind.new { background: var(--phosphor); color: var(--graphite); }
+.kind.changed { background: var(--violet); color: #fff; }
+.kind.fixed { background: #fff; color: var(--subtitle); box-shadow: inset 0 0 0 1px var(--edge); }
+@media (max-width: 700px) {
+  .entry { grid-template-columns: 1fr; }
+  .page .entry li { grid-template-columns: 1fr; gap: 6px; }
+}
+
 .release { border-left: 3px solid var(--phosphor-deep); padding-left: 18px; margin-top: 28px; }
 .release .when { font: 600 12px/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--phosphor-deep); }
 @media (max-width: 880px) { .tools { grid-template-columns: 1fr; } .page { padding: 44px 0 64px; } }
