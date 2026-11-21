@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Opir — принципиальные схемы по ЕСКД для macOS</title>
 <meta name="description" content="Opir — редактор принципиальных электрических схем для macOS: чертёж по ЕСКД, ассистент, который собирает схему по описанию, электрощиты с таблицей групп.">
-<link rel="stylesheet" href="../assets/site.css?v=1121c">
+<link rel="stylesheet" href="../assets/site.css?v=1121d">
 <link rel="alternate" hreflang="uk" href="https://opir.dev/">
 <link rel="alternate" hreflang="ru" href="https://opir.dev/ru/">
 <link rel="alternate" hreflang="en" href="https://opir.dev/en/">
@@ -166,8 +166,11 @@
         <li><b>Даташит при детали</b><span>Перетащите PDF на компонент — он сохранится в документе и всегда будет под рукой. Цоколёвку и предельные режимы ассистент берёт из него, а не из памяти.</span></li>
         <li><b>Каждая правка — один шаг отмены</b><span>Изменённое ассистентом подсвечивается на листе зелёным. Не понравилось — ⌘Z.</span></li>
         <li><b>Честно о границах</b><span>Что считает программа, а что — оценка самой модели, ассистент называет отдельно.</span></li>
-        <li><b>MCP для Claude Desktop и Claude Code</b><span>Внешний клиент работает с открытым документом через локальный сервер, только на 127.0.0.1.</span>
-<div class="code">{ <i>"mcpServers"</i>: { <i>"opir"</i>: { "command": "opir", "args": ["mcp"] } } }</div></li>
+        <li><b>MCP для Claude Desktop и Claude Code</b><span>Внешний клиент работает с открытым документом через локальный сервер, только на 127.0.0.1. Готовую конфигурацию даёт кнопка «Скопировать конфигурацию для клиента» в настройках — или впишите её вручную:</span>
+<div class="code">{ <i>"mcpServers"</i>: { <i>"opir"</i>: {
+  "command":
+  "/Applications/Opir.app/Contents/Helpers/opir",
+  "args": ["mcp"] } } }</div></li>
       </ul>
     </div>
     <div class="panel"><div class="chat"><img src="../images/assistant-ru.webp?v=1121b" width="558" height="778" alt="Окно ассистента: расчёт задержки реле времени, замена конденсатора и совет, помеченный как собственная оценка модели"></div></div>

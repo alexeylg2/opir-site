@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Opir — принципові схеми за ЄСКД для macOS</title>
 <meta name="description" content="Opir — редактор принципових електричних схем для macOS: креслення за ЄСКД, асистент, що збирає схему за описом, електрощити з таблицею груп.">
-<link rel="stylesheet" href="assets/site.css?v=1121c">
+<link rel="stylesheet" href="assets/site.css?v=1121d">
 <link rel="alternate" hreflang="uk" href="https://opir.dev/">
 <link rel="alternate" hreflang="ru" href="https://opir.dev/ru/">
 <link rel="alternate" hreflang="en" href="https://opir.dev/en/">
@@ -166,8 +166,11 @@
         <li><b>Даташит при деталі</b><span>Перетягніть PDF на компонент — він збережеться в документі й завжди буде під рукою. Цоколівку і граничні режими асистент бере з нього, а не з пам’яті.</span></li>
         <li><b>Кожна правка — один крок скасування</b><span>Змінене асистентом підсвічується на аркуші зеленим. Не сподобалось — ⌘Z.</span></li>
         <li><b>Чесно про межі</b><span>Що рахує програма, а що — оцінка самої моделі, асистент називає окремо.</span></li>
-        <li><b>MCP для Claude Desktop і Claude Code</b><span>Зовнішній клієнт працює з відкритим документом через локальний сервер, лише на 127.0.0.1.</span>
-<div class="code">{ <i>"mcpServers"</i>: { <i>"opir"</i>: { "command": "opir", "args": ["mcp"] } } }</div></li>
+        <li><b>MCP для Claude Desktop і Claude Code</b><span>Зовнішній клієнт працює з відкритим документом через локальний сервер, лише на 127.0.0.1. Готову конфігурацію дає кнопка «Скопіювати конфігурацію для клієнта» в параметрах — або впишіть її вручну:</span>
+<div class="code">{ <i>"mcpServers"</i>: { <i>"opir"</i>: {
+  "command":
+  "/Applications/Opir.app/Contents/Helpers/opir",
+  "args": ["mcp"] } } }</div></li>
       </ul>
     </div>
     <div class="panel"><div class="chat"><img src="images/assistant.webp?v=1121b" width="558" height="638" alt="Вікно асистента: розрахунок затримки реле часу, зміна конденсатора і порада, позначена як власна оцінка моделі"></div></div>

@@ -193,7 +193,7 @@ section.paper { padding: 92px 0; }
 .points span { color: #C4C7D4; font-size: 15.5px; }
 .code {
   margin-top: 14px; background: var(--sunken); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px;
-  font: 13px/1.6 var(--mono); color: #C9CCDA; overflow-x: auto; white-space: pre;
+  font: 12px/1.6 var(--mono); color: #C9CCDA; overflow-x: auto; white-space: pre;
 }
 .code i { font-style: normal; color: var(--phosphor); }
 /* The assistant's own window, whole. Its corners are round and white beyond them in the shot: the cut follows the
