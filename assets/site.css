@@ -158,7 +158,7 @@ section.paper { padding: 92px 0; }
   background: var(--sunken); border: 1px solid var(--rule); color: var(--on-graphite);
 }
 .sheet .ask b { display: block; font: 600 11px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--phosphor); margin-bottom: 7px; }
-.shot { border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.45); }
+.shot { border-radius: 8px; overflow: hidden; box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.45); }
 .shot img { width: 100%; height: auto; }
 /* A shot of a whole window: cut inside the window's own round corners, as on the main one. */
 .shot:not(.fit):not(.top):not(.todo) { border-radius: 2% / 3.2%; }
@@ -303,8 +303,8 @@ dialog.zoom {
 dialog.zoom::backdrop { background: rgba(14,15,22,0.88); }
 /* Never larger than the picture itself: a screenshot stretched past its own pixels only blurs. */
 dialog.zoom img {
-  display: block; width: auto; height: auto; max-width: 96vw; max-height: 94vh;
-  border-radius: 22px; box-shadow: 0 30px 90px rgba(0,0,0,0.6); cursor: default; background: #fff;
+  display: block; width: auto; height: auto; max-width: 96vw; max-height: 94vh; object-fit: contain;
+  cursor: default; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6));
 }
 dialog.zoom button {
   position: fixed; top: 14px; right: 16px; width: 40px; height: 40px; border-radius: 50%; border: 0;

@@ -26,6 +26,8 @@
     const show = () => {
       large.src = picture.currentSrc || picture.src;
       large.alt = picture.alt;
+      // A capture at double density is shown no larger than the window was: its width attribute says how wide.
+      large.style.maxWidth = `min(96vw, ${picture.getAttribute("width")}px)`;
       dialog.showModal();
     };
     picture.addEventListener("click", show);
