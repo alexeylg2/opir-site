@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opir у Claude Desktop та інших ШІ-застосунках через MCP — Opir</title>
+<meta name="description" content="Через вбудований сервер MCP Claude Desktop, Claude Code чи інший ШІ-застосунок працює з вашими схемами: читає, перевіряє, змінює, зводить кілька документів разом. Приклад і підключення.">
+<link rel="stylesheet" href="../assets/site.css?v=1122u">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/ai/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/ai/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/ai/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/ai/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Можливості</a>
+      <a href="../cases/">Сценарії</a>
+      <a href="../#assistant">Асистент</a>
+      <a href="../#standards">Стандарти</a>
+      <a href="../#faq">Питання</a>
+      <a href="../changelog/">Журнал</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Мова"><span class="on">UA</span><a href="/ru/ai/" hreflang="ru">RU</a><a href="/en/ai/" hreflang="en">EN</a></div>
+      <a class="btn phosphor small" href="../#get">Завантажити</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="caps">Claude Desktop, Claude Code та інші клієнти MCP</div>
+    <h1>Ваш ШІ-застосунок<br><b>працює</b> <em>прямо з Opir.</em></h1>
+    <p class="lead">Opir має вбудований сервер MCP. Через нього Claude Desktop, Claude Code чи інший застосунок, що вміє MCP, бачить ваші схеми й працює з ними: читає, перевіряє, змінює, зводить кілька документів разом — у звичній розмові.</p>
+    <div class="actions">
+      <a class="btn phosphor" href="#connect">Як підключити</a>
+      <a class="btn ghost" href="#example">Приклад</a>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="why">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Що це дає</div>
+      <h2>Схема — частина вашої розмови з ШІ</h2>
+      <p>Вбудований асистент Opir бачить відкритий документ. Зовнішній застосунок бачить більше: кілька документів, файли на диску й інші свої інструменти.</p>
+    </div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>Ваша підписка й ваша модель</h3>
+        <p>Працюйте з Claude, за який уже платите, у Claude Desktop чи Claude Code: окремий ключ API в Opir для цього не потрібен.</p>
+      </div>
+      <div class="plate">
+        <h3>Багато документів разом</h3>
+        <p>Помічник відкриває файли .opir на диску, навіть коли Opir закрито: пройтися по папці, перевірити всі схеми, звести спільний перелік.</p>
+      </div>
+      <div class="plate">
+        <h3>Разом з іншими інструментами</h3>
+        <p>У тій самій розмові — те, що вміє ваш клієнт: пошук у мережі, таблиці, файли, інші сервери MCP. Знайти деталь, звести закупівлю, написати записку за схемою.</p>
+      </div>
+      <div class="plate">
+        <h3>Правки видно одразу</h3>
+        <p>Зміни з’являються у відкритому документі. Змінене підсвічується, кожен виклик — один крок скасування: ⌘Z повертає як було.</p>
+      </div>
+      <div class="plate">
+        <h3>Кілька помічників разом</h3>
+        <p>Вбудований асистент і зовнішні клієнти, підключені одночасно, дізнаються про правки одне одного.</p>
+      </div>
+      <div class="plate">
+        <h3>Тільки на вашому Mac</h3>
+        <p>Сервер слухає лише 127.0.0.1, а доступ вмикаєте ви — у меню «Опір». Без цього жоден клієнт схеми не побачить.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="assistant" id="example">
+  <div class="wrap">
+    <div class="caps">Приклад</div>
+    <h2>Шість схем, одна розмова</h2>
+    <p class="lead">Справжній запуск через Claude Code над демо-схемами з цього сайту: помічник сам знайшов файли, перевірив кожну схему, прочитав перелік елементів і звів закупівлю. Тринадцять викликів інструментів Opir, Opir при цьому навіть не відкривали.</p>
+    <div class="transcript">
+      <div class="msg you"><b>Ви</b>У папці «Схеми» шість моїх проєктів. Перевір кожен і склади спільний список резисторів для замовлення.</div>
+      <div class="calls">
+        <span>find_documents</span><span>run_erc × 6</span><span>get_bom × 6</span>
+      </div>
+      <div class="msg bot"><b>Помічник</b>
+        <p>Знайшов шість документів. Перевірка схеми: п’ять без зауважень, у «Щиті будинку» одне попередження — групи за автоматом генератора QF2 разом беруть 46,7 А при номіналі 16 А.</p>
+        <p>Постійних резисторів на всі проєкти — 26 штук, 16 номіналів:</p>
+        <table>
+          <tr><th>Номінал</th><th>Шт.</th><th>Де</th></tr>
+          <tr><td>1 кОм</td><td>6</td><td>адаптер, мигалка, однотактник, підсилювач</td></tr>
+          <tr><td>470 Ом</td><td>2</td><td>мигалка, підсилювач</td></tr>
+          <tr><td>2,2 кОм</td><td>2</td><td>адаптер, підсилювач</td></tr>
+          <tr><td>15 кОм</td><td>2</td><td>підсилювач</td></tr>
+          <tr><td>82 кОм</td><td>2</td><td>підсилювач</td></tr>
+          <tr><td>100 кОм</td><td>2</td><td>адаптер, однотактник</td></tr>
+        </table>
+        <p>Ще десять номіналів — по одному: 1, 22, 100, 220 Ом; 1,5; 4,7; 10; 47; 220 і 470 кОм. Окремо — змінний 470 кОм для однотактника. Скласти це таблицею для магазину?</p>
+      </div>
+    </div>
+    <p class="note-dark">Відповідь помічника скорочено; цифри — ті, що повернули інструменти Opir.</p>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Ідеї для запитів</div>
+      <h2>Що ще можна доручити</h2>
+    </div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>Звіт для замовника</h3>
+        <p>«Прочитай таблицю груп щита й напиши пояснення для замовника: які лінії, які автомати, що на резерві.»</p>
+      </div>
+      <div class="plate">
+        <h3>Порівняння версій</h3>
+        <p>«Порівняй “Щит v1” і “Щит v2” й скажи, що змінилося: деталі, мережі, номінали.»</p>
+      </div>
+      <div class="plate">
+        <h3>Схема за описом</h3>
+        <p>«Збери в новому аркуші стабілізатор 5 В на LM7805 з конденсаторами за даташитом.» Деталі й мережі — асистент, проводи — ви.</p>
+      </div>
+      <div class="plate">
+        <h3>Пакетна робота</h3>
+        <p>«Перенумеруй компоненти в усіх схемах папки й перевір, чи не лишилося помилок.»</p>
+      </div>
+      <div class="plate">
+        <h3>Записка до курсового</h3>
+        <p>«Опиши, як працює схема, для пояснювальної записки, з посиланнями на позиційні позначення.»</p>
+      </div>
+      <div class="plate">
+        <h3>Netlist і SPICE</h3>
+        <p>«Видай netlist для SPICE і підготуй файл моделі для симуляції цього каскаду.»</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="connect" style="padding-top:0">
+  <div class="wrap">
+    <div class="connect">
+      <div class="caps">Підключення</div>
+      <h2>Як підключити ШІ-застосунок до Opir</h2>
+      <ol class="steps">
+        <li>
+          <h3>Увімкніть доступ</h3>
+          <p>Меню <b>Опір → Дозволити доступ ШІ (MCP)</b>. Типово доступ вимкнено.</p>
+        </li>
+        <li>
+          <h3>Скопіюйте конфігурацію</h3>
+          <p><b>Опір → Параметри… → Зовнішні ШІ-клієнти → Скопіювати конфігурацію для клієнта</b>. У буфері — готовий фрагмент із точним шляхом до програми.</p>
+        </li>
+        <li>
+          <h3>Вставте в клієнт</h3>
+          <p><b>Claude Desktop</b>: допишіть фрагмент у <code>claude_desktop_config.json</code> і перезапустіть програму. <b>Claude Code</b>: одна команда в терміналі — <code>claude mcp add opir -- /Applications/Opir.app/Contents/Helpers/opir mcp</code>.</p>
+        </li>
+        <li>
+          <h3>Перевірте</h3>
+          <p>Відкрийте схему в Opir і спитайте клієнта: «Які документи відкриті в Opir?» Він має назвати ваш документ.</p>
+        </li>
+      </ol>
+      <p class="more-link">Інші клієнти, ручне налаштування й що робити, якщо не працює, — на сторінці <a href="../mcp/">Налаштування MCP</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="paper" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Чесно</div>
+      <h2>Що варто знати</h2>
+      <p>Схему, з якою працює клієнт, отримує модель цього клієнта: з хмарним сервісом вона йде на його сервери. Проводи клієнт не прокладає — він з’єднує виводи мережами, а креслите ви або команда «Розвести мережу». Символів він не вигадує: якщо деталі немає в бібліотеці, скаже, чого бракує.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Принципові схеми за ЄСКД</span>
+    <a href="../changelog/">Журнал</a>
+    <a href="../mcp/">Налаштування MCP</a>
+    <a href="../privacy/">Приватність</a>
+    <a href="mailto:support@opir.dev">support@opir.dev</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+<script src="../assets/site.js?v=1121b" defer></script>
+</body>
+</html>

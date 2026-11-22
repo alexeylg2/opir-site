@@ -340,3 +340,29 @@ dialog.zoom button {
   background: rgba(255,255,255,0.14); color: #fff; font: 400 26px/1 var(--sans, system-ui); cursor: pointer;
 }
 dialog.zoom button:hover { background: rgba(255,255,255,0.26); }
+
+/* ——— A conversation with an outside AI client (ai/) ——— */
+.transcript { margin-top: 28px; display: grid; gap: 14px; max-width: 880px; }
+.msg { border-radius: 14px; padding: 14px 18px; font-size: 15.5px; line-height: 1.5; }
+.msg b { display: block; font: 600 11px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+.msg.you { justify-self: end; max-width: 640px; background: var(--raised); border: 1px solid var(--rule); color: var(--on-graphite); }
+.msg.you b { color: var(--violet-on-graphite); }
+.msg.bot { background: var(--sunken); border: 1px solid var(--rule); color: #C4C7D4; }
+.msg.bot b { color: var(--phosphor); }
+.msg.bot p + p, .msg.bot table + p { margin-top: 10px; }
+.msg table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14.5px; }
+.msg th, .msg td { text-align: left; padding: 6px 8px; border-top: 1px solid var(--rule); vertical-align: top; }
+.msg th { color: var(--muted-on-graphite); font-weight: 600; }
+.calls { display: flex; flex-wrap: wrap; gap: 8px; }
+.calls span { font: 600 12px/1 var(--mono); padding: 7px 10px; border-radius: 8px; color: var(--phosphor);
+  background: rgba(184,242,58,0.10); border: 1px solid rgba(184,242,58,0.3); }
+.note-dark { margin-top: 14px; font-size: 13.5px; color: #8D92A5; }
+.more-on-dark { margin-top: 18px; }
+.more-on-dark a { color: var(--phosphor); font-weight: 600; }
+.connect { background: #fff; border: 1px solid var(--edge); border-radius: 18px; padding: 34px 36px; }
+.connect h2 { font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 700; margin: 10px 0 4px; }
+.connect h3 { font-size: 18px; font-weight: 650; margin-bottom: 6px; }
+.connect p { color: var(--subtitle); }
+.connect code { font: 0.88em var(--mono); background: var(--tracing); border: 1px solid var(--edge); border-radius: 5px; padding: 1px 5px; overflow-wrap: anywhere; color: var(--title); }
+.connect .more-link { margin-top: 6px; }
+@media (max-width: 880px) { .connect { padding: 24px 20px; } .msg { font-size: 15px; } }

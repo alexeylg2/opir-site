@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opir in Claude Desktop and other AI apps over MCP — Opir</title>
+<meta name="description" content="Through the built-in MCP server, Claude Desktop, Claude Code or another AI app works with your schematics: reads, checks, edits, brings several documents together. An example and how to connect.">
+<link rel="stylesheet" href="../../assets/site.css?v=1122u">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/ai/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/ai/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/ai/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/ai/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Features</a>
+      <a href="../cases/">Scenarios</a>
+      <a href="../#assistant">Assistant</a>
+      <a href="../#standards">Standards</a>
+      <a href="../#faq">Questions</a>
+      <a href="../changelog/">Journal</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Language"><a href="/ai/" hreflang="uk">UA</a><a href="/ru/ai/" hreflang="ru">RU</a><span class="on">EN</span></div>
+      <a class="btn phosphor small" href="../#get">Download</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="caps">Claude Desktop, Claude Code and other MCP clients</div>
+    <h1>Your AI app<br><b>works</b> <em>right in Opir.</em></h1>
+    <p class="lead">Opir has a built-in MCP server. Through it Claude Desktop, Claude Code or any other app that speaks MCP sees your schematics and works with them: reads, checks, edits, brings several documents together, all in the conversation you are used to.</p>
+    <div class="actions">
+      <a class="btn phosphor" href="#connect">How to connect</a>
+      <a class="btn ghost" href="#example">An example</a>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="why">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">What it gives you</div>
+      <h2>The schematic becomes part of your AI conversation</h2>
+      <p>Opir’s built-in assistant sees the open document. An outside app sees more: several documents, files on disk and its own other tools.</p>
+    </div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>Your subscription, your model</h3>
+        <p>Work with the Claude you already pay for, in Claude Desktop or Claude Code: no separate API key in Opir is needed for it.</p>
+      </div>
+      <div class="plate">
+        <h3>Many documents at once</h3>
+        <p>The assistant opens .opir files on disk even when Opir is closed: go through a folder, check every schematic, combine the parts lists.</p>
+      </div>
+      <div class="plate">
+        <h3>Together with other tools</h3>
+        <p>In the same conversation, whatever your client can do: web search, spreadsheets, files, other MCP servers. Find a part, sum up the purchase, write notes from the drawing.</p>
+      </div>
+      <div class="plate">
+        <h3>Edits show at once</h3>
+        <p>Changes appear in the open document. What changed is highlighted, and each call is one undo step: ⌘Z puts it back.</p>
+      </div>
+      <div class="plate">
+        <h3>Several assistants together</h3>
+        <p>The built-in assistant and outside clients connected at the same time learn of each other’s edits.</p>
+      </div>
+      <div class="plate">
+        <h3>Only on your Mac</h3>
+        <p>The server listens on 127.0.0.1 only, and you switch access on in the Opir menu. Without it no client sees a thing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="assistant" id="example">
+  <div class="wrap">
+    <div class="caps">An example</div>
+    <h2>Six schematics, one conversation</h2>
+    <p class="lead">A real run through Claude Code over the demo schematics on this site: the assistant found the files, checked every schematic, read the parts lists and summed up the purchase. Thirteen calls to Opir’s tools, and Opir itself was never even opened.</p>
+    <div class="transcript">
+      <div class="msg you"><b>You</b>There are six of my projects in the “Schematics” folder. Check each one and make one list of resistors to order.</div>
+      <div class="calls">
+        <span>find_documents</span><span>run_erc × 6</span><span>get_bom × 6</span>
+      </div>
+      <div class="msg bot"><b>Assistant</b>
+        <p>Found six documents. Check Schematic: five clean; “House board” has one warning: the groups behind the generator breaker QF2 draw 46.7 A together against its 16 A rating.</p>
+        <p>Fixed resistors across the projects: 26 pieces, 16 values:</p>
+        <table>
+          <tr><th>Value</th><th>Qty</th><th>Where</th></tr>
+          <tr><td>1 kΩ</td><td>6</td><td>adapter, flasher, single-ended amp, amplifier</td></tr>
+          <tr><td>470 Ω</td><td>2</td><td>flasher, amplifier</td></tr>
+          <tr><td>2.2 kΩ</td><td>2</td><td>adapter, amplifier</td></tr>
+          <tr><td>15 kΩ</td><td>2</td><td>amplifier</td></tr>
+          <tr><td>82 kΩ</td><td>2</td><td>amplifier</td></tr>
+          <tr><td>100 kΩ</td><td>2</td><td>adapter, single-ended amp</td></tr>
+        </table>
+        <p>Ten more values, one of each: 1, 22, 100, 220 Ω; 1.5, 4.7, 10, 47, 220 and 470 kΩ. Separately, a 470 kΩ pot for the single-ended amp. Shall I put this into a table for the shop?</p>
+      </div>
+    </div>
+    <p class="note-dark">The assistant’s answer is shortened; the figures are the ones Opir’s tools returned.</p>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Ideas to ask</div>
+      <h2>What else you can hand over</h2>
+    </div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>A report for the customer</h3>
+        <p>“Read the board’s table of groups and write an explanation for the customer: which lines, which breakers, what is on backup.”</p>
+      </div>
+      <div class="plate">
+        <h3>Comparing versions</h3>
+        <p>“Compare ‘Board v1’ and ‘Board v2’ and tell me what changed: parts, nets, values.”</p>
+      </div>
+      <div class="plate">
+        <h3>A circuit from a description</h3>
+        <p>“On a new sheet, build a 5 V regulator on an LM7805 with the capacitors from its datasheet.” Parts and nets by the assistant, wires by you.</p>
+      </div>
+      <div class="plate">
+        <h3>Batch work</h3>
+        <p>“Renumber the components in every schematic in the folder and check that no errors are left.”</p>
+      </div>
+      <div class="plate">
+        <h3>Coursework notes</h3>
+        <p>“Describe how the circuit works for my written report, referring to the designators.”</p>
+      </div>
+      <div class="plate">
+        <h3>Netlist and SPICE</h3>
+        <p>“Give me the SPICE netlist and prepare a model file to simulate this stage.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="connect" style="padding-top:0">
+  <div class="wrap">
+    <div class="connect">
+      <div class="caps">Connecting</div>
+      <h2>How to connect an AI app to Opir</h2>
+      <ol class="steps">
+        <li>
+          <h3>Turn access on</h3>
+          <p>Menu <b>Opir → Allow AI Access (MCP)</b>. Access is off by default.</p>
+        </li>
+        <li>
+          <h3>Copy the configuration</h3>
+          <p><b>Opir → Settings… → External AI clients → Copy Client Configuration</b>. The clipboard now holds a ready snippet with the exact path to the app.</p>
+        </li>
+        <li>
+          <h3>Paste it into the client</h3>
+          <p><b>Claude Desktop</b>: add the snippet to <code>claude_desktop_config.json</code> and restart the app. <b>Claude Code</b>: one command in Terminal, <code>claude mcp add opir -- /Applications/Opir.app/Contents/Helpers/opir mcp</code>.</p>
+        </li>
+        <li>
+          <h3>Check</h3>
+          <p>Open a schematic in Opir and ask the client: “Which documents are open in Opir?” It should name yours.</p>
+        </li>
+      </ol>
+      <p class="more-link">Other clients, manual setup and what to do if it doesn’t work: see <a href="../mcp/">MCP setup</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="paper" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Honestly</div>
+      <h2>Worth knowing</h2>
+      <p>The schematic the client works with goes to that client’s model: with a cloud service, to its servers. The client doesn’t lay wires; it joins pins into nets, and you draw, or use Route Net. It doesn’t make up symbols: if a part is missing from the library, it says what is missing.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Schematic diagrams, drawn to standard</span>
+    <a href="../changelog/">Journal</a>
+    <a href="../mcp/">MCP setup</a>
+    <a href="../privacy/">Privacy</a>
+    <a href="mailto:support@opir.dev">support@opir.dev</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+<script src="../../assets/site.js?v=1121b" defer></script>
+</body>
+</html>
