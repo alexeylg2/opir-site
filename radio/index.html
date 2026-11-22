@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лампова техніка: однотактник на 6П3С, кенотрон, накал — Opir</title>
+<meta name="description" content="Тріоди, пентоди, кенотрони й вихідні трансформатори за ГОСТ. Перемалюйте схему зі старого журналу, а асистент перевірить режим ламп, потужність на аноді й накал. Opir для macOS.">
+<link rel="stylesheet" href="../assets/site.css?v=1122t">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/radio/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/radio/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/radio/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/radio/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Можливості</a>
+      <a href="../cases/">Сценарії</a>
+      <a href="../#assistant">Асистент</a>
+      <a href="../#standards">Стандарти</a>
+      <a href="../#faq">Питання</a>
+      <a href="../changelog/">Журнал</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Мова"><span class="on">UA</span><a href="/ru/radio/" hreflang="ru">RU</a><a href="/en/radio/" hreflang="en">EN</a></div>
+      <a class="btn phosphor small" href="../#get">Завантажити</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="caps">Радіоаматорам і любителям лампового звуку</div>
+    <h1>Ламповий звук<br><b>починається</b> <em>з креслення.</em></h1>
+    <p class="lead">Тріоди, пентоди, кенотрони, вихідні трансформатори — у бібліотеці за ГОСТ. Перемалюйте схему зі старого журналу, а асистент перевірить режим ламп, потужність на аноді й накал.</p>
+    <div class="actions">
+      <span class="btn phosphor soon"><span class="tag">Скоро</span> Opir для macOS</span>
+      <a class="btn ghost" href="../files/tube-uk.pdf">Приклад: однотактник, PDF</a>
+    </div>
+    <p class="note">macOS 15 і новіше</p>
+  </div>
+</section>
+
+<div class="stage">
+  <div class="wrap">
+    <div class="window sheetshot"><img src="../images/tube.jpg?v=1122a" width="1800" height="1273" alt="Однотактний підсилювач на 6Н2П і 6П3С з блоком живлення на кенотроні 6Ц4П"></div>
+  </div>
+</div>
+
+<section class="desk" id="bench">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">На верстаку</div>
+      <h2>Чотири питання перед тим, як вмикати анодне</h2>
+      <p>І як на них відповідає Opir.</p>
+    </div>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ПИТАННЯ 1</div>
+        <h3>«Схема зі старого журналу ледве читається»</h3>
+        <p>Сфотографуйте сторінку й покладіть під аркуш. Асистент прочитає деталі й мережі та поставить їх так, як на оригіналі, а проводи ви прокладете самі, звіряючись із картинкою. Номінали, які на фото не розібрати, він позначить як сумнівні.</p>
+      </div>
+      <div class="shot"><img src="../images/digitise.webp?v=1121b" width="1438" height="898" alt="Фото схеми зі старого журналу під аркушем, деталі поставлені поверх, праворуч відповідь асистента"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ПИТАННЯ 2</div>
+        <h3>«Чи не перевантажена лампа?»</h3>
+        <p>Асистент оцінює режим 6П3С за схемою: автозміщення на R6, струм анода, потужність на аноді — близько 85–90 % від граничної. І помічає те, що легко пропустити: через R7 тече лише струм другої сітки, тож на шині «+250 В» буде близько 290 В. Довідкові дані ламп він бере з пам’яті й так і пише.</p>
+        <div class="ask"><b>Запит</b>Перевір підсилювач: який режим у 6П3С, чи не перевищена потужність на аноді, і чи правильно підключено накал. Нічого не змінюй.</div>
+      </div>
+      <div class="shot"><img src="../images/tube-ask.webp?v=1122a" width="1438" height="881" alt="Асистент перевіряє режим 6П3С: автозміщення, струм і потужність на аноді, напруга на другій сітці"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ПИТАННЯ 3</div>
+        <h3>«Накал і живлення — без павутиння»</h3>
+        <p>Накал усіх ламп — мітками Н1 і Н2 від накальної обмотки, анодна напруга — знаками «+300 В» і «+250 В». Схема лишається читабельною, а програма знає, що з чим з’єднано: однакові імена — одна мережа. Секцію накалу подвійного тріода можна поставити окремо, біля блока живлення.</p>
+      </div>
+      <div class="shot plain"><img src="../images/tube-psu.jpg?v=1122a" width="1300" height="533" alt="Блок живлення: силовий трансформатор із відводом, кенотрон 6Ц4П, фільтр C4-R7-C5, накальний трансформатор і мітки Н1, Н2"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ПИТАННЯ 4</div>
+        <h3>«Що купити й що намотати?»</h3>
+        <p>Перелік елементів складається зі схеми: лампи, трансформатори, конденсатори на 450 В, резистори — кожна позиція з номіналом. Подвійний тріод — один рядок, хоч би скільки його секцій стояло на аркуші. Специфікацію можна зберегти в CSV.</p>
+      </div>
+      <div class="shot top"><img src="../images/tube-list.jpg?v=1122a" width="1060" height="1500" alt="Перелік елементів підсилювача: конденсатори, резистори, трансформатори, лампи"></div>
+    </article>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">У бібліотеці</div>
+      <h2>Для ламп і приймачів</h2>
+    </div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>Лампи за ГОСТ</h3>
+        <p>Тріод, подвійний тріод, променевий тетрод, пентод, кенотрон — з виводами накалу. Секції подвійного тріода ставляться окремо.</p>
+      </div>
+      <div class="plate">
+        <h3>Трансформатори й дроселі</h3>
+        <p>З відводом від середини, з двома вторинними, звичайні; котушки з відводом і підстроювальним осердям.</p>
+      </div>
+      <div class="plate">
+        <h3>Для приймача</h3>
+        <p>Змінні й підстроювальні конденсатори, кварцовий резонатор, антени штирьова й магнітна, галетний перемикач.</p>
+      </div>
+      <div class="plate">
+        <h3>Мітки й знаки живлення</h3>
+        <p>Однакові імена — одна мережа: накал, анодне живлення, сигнал з аркуша на аркуш.</p>
+      </div>
+      <div class="plate">
+        <h3>Даташит лампи</h3>
+        <p>Прикріпіть довідковий листок до лампи — асистент братиме граничні режими з нього, а не з пам’яті.</p>
+      </div>
+      <div class="plate">
+        <h3>SPICE і KiCad</h3>
+        <p>Netlist для SPICE і KiCad. Моделей ламп Opir не постачає — їх підключаєте самі.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Чесно</div>
+      <h2>Що лишається за вами</h2>
+      <p>Режим ламп програма не рахує: струми й потужності асистент оцінює з даташита або з пам’яті й так і позначає. Перевіряйте вимірюванням.</p>
+      <p>Анодна напруга небезпечна й після вимкнення: розряджайте конденсатори фільтра, перш ніж лізти в монтаж.</p>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="sample" style="padding-top:0">
+  <div class="wrap">
+    <div class="get">
+      <h2>Подивіться приклад</h2>
+      <p>Однотактний підсилювач на 6Н2П і 6П3С із кенотронним випрямлячем на 6Ц4П: схема й перелік елементів. PDF відкривається будь-де; файл .opir — в Opir.</p>
+      <div class="actions">
+        <a class="btn phosphor" href="../files/tube-uk.pdf">Приклад у PDF</a>
+        <a class="btn ghost" href="../files/tube-uk.zip" download>Файл .opir</a>
+      </div>
+      <div class="reqs"><span>macOS 15 і новіше</span><span>UA · RU · EN</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Питання</div>
+      <h2>Що зазвичай питають</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Немає потрібної лампи — що робити?</summary>
+        <p>Візьміть найближчу за будовою — тріод, пентод, тетрод — і впишіть її тип у номінал. Якщо будова інша, «Створити за зразком…» на схожій лампі.</p>
+      </details>
+      <details>
+        <summary>А транзисторні конструкції?</summary>
+        <p>Так само: транзистори, мікросхеми, стабілізатори, оптрони — у бібліотеці, а асистент і перевірка працюють однаково.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Принципові схеми за ЄСКД</span>
+    <a href="../changelog/">Журнал</a>
+    <a href="../mcp/">Налаштування MCP</a>
+    <a href="../privacy/">Приватність</a>
+    <a href="mailto:support@opir.dev">support@opir.dev</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+<script src="../assets/site.js?v=1121b" defer></script>
+</body>
+</html>
