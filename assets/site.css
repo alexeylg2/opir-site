@@ -237,6 +237,21 @@ section.paper { padding: 92px 0; }
 .get p { color: var(--muted-on-graphite); margin: 12px auto 26px; max-width: 560px; }
 .reqs { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; margin-top: 24px; font: 13px/1.4 var(--mono); color: #8D92A5; }
 
+/* ——— Early access ——— */
+.early {
+  display: grid; grid-template-columns: 1fr auto; gap: 22px 44px; align-items: center;
+  background: var(--plate); border: 1px solid var(--edge); border-radius: 22px; padding: 40px 44px;
+}
+.early h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 700; margin-top: 8px; }
+.early p { color: var(--subtitle); margin-top: 10px; max-width: 640px; }
+.early .kinds { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.early .kinds span {
+  font: 13px/1.4 var(--mono); color: var(--caps); background: var(--tracing);
+  border: 1px solid var(--edge); border-radius: 8px; padding: 5px 10px;
+}
+.early .btn:hover { text-decoration: none; filter: brightness(1.04); }
+@media (max-width: 720px) { .early { grid-template-columns: 1fr; padding: 28px 22px; } }
+
 /* ——— Questions ——— */
 .faq { max-width: 800px; }
 details { border-top: 1px solid var(--edge-strong); padding: 18px 0; }
