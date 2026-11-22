@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Резервное питание дома: генератор, инвертор, схема щита — Opir</title>
+<meta name="description" content="Схема щита с генератором и гибридным инвертором по ЕСКД: без обратной подачи в сеть, с расчётом резервных групп и проверкой ассистентом. Opir для macOS.">
+<link rel="stylesheet" href="../../assets/site.css?v=1122t">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/backup/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/backup/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/backup/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/backup/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Возможности</a>
+      <a href="../cases/">Сценарии</a>
+      <a href="../#assistant">Ассистент</a>
+      <a href="../#standards">Стандарты</a>
+      <a href="../#faq">Вопросы</a>
+      <a href="../changelog/">Журнал</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Язык"><a href="/backup/" hreflang="uk">UA</a><span class="on">RU</span><a href="/en/backup/" hreflang="en">EN</a></div>
+      <a class="btn phosphor small" href="../#get">Скачать</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="caps">Резервное питание дома</div>
+    <h1>Свет пропал.<br><b>Дом</b> — <em>работает.</em></h1>
+    <p class="lead">Генератор, гибридный инвертор, аккумулятор — и схема щита, по которой электрик сделает всё правильно. Opir чертит её по ЕСКД и считает нагрузку групп, а ассистент проверяет, не пойдёт ли напряжение в сеть.</p>
+    <div class="actions">
+      <span class="btn phosphor soon"><span class="tag">Скоро</span> Opir для macOS</span>
+      <a class="btn ghost" href="../../files/backup-ru.pdf">Пример щита, PDF</a>
+    </div>
+    <p class="note">macOS 15 и новее</p>
+  </div>
+</section>
+
+<div class="stage">
+  <div class="wrap">
+    <div class="window sheetshot"><img src="../../images/backup-ru.jpg?v=1122a" width="1800" height="1273" alt="Схема щита частного дома на листе А3: ввод сети и генератора через переключатель, гибридный инвертор с аккумулятором, резервные и обычные группы"></div>
+  </div>
+</div>
+
+<section class="desk" id="questions">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Прежде чем звать электрика</div>
+      <h2>Четыре вопроса, которые не дают спать</h2>
+      <p>Ответы на них — на одном листе схемы.</p>
+    </div>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ВОПРОС 1</div>
+        <h3>«Не ударит ли генератор монтёра на линии?»</h3>
+        <p>Генератор или станция, включённые в розетку кабелем «вилка-вилка», отдают напряжение в сеть — туда, где работают люди. Схема показывает, как этого не допустить: сеть и генератор сходятся только на переключателе QS1 «I–0–II», который размыкает и L, и N. Включить их вместе невозможно.</p>
+      </div>
+      <div class="shot plain"><img src="../../images/backup-switch-ru.jpg?v=1122a" width="1100" height="718" alt="Ввод сети через реле напряжения KV1 и генератор G1 через автомат QF2 сходятся только на переключателе QS1 I–0–II"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ВОПРОС 2</div>
+        <h3>«Хватит ли инвертора?»</h3>
+        <p>Котёл, холодильник, насос, свет и роутер — отдельной резервной шиной за гибридным инвертором. Таблица групп считает нагрузку каждой линии; ассистент складывает резервные группы и сравнивает с инвертором: 1,7 кВт против 5 кВт, запас втрое. И прикидывает, на сколько часов хватит аккумулятора.</p>
+      </div>
+      <div class="shot plain"><img src="../../images/backup-inverter-ru.jpg?v=1122a" width="1300" height="923" alt="Гибридный инвертор: выпрямитель U1 заряжает аккумулятор GB1, инвертор U2 питает резервные группы котла, холодильника, насоса и света"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ВОПРОС 3</div>
+        <h3>«Потянет ли генератор весь дом?»</h3>
+        <p>Чаще всего — нет, и лучше знать это до первого отключения. Проверка схемы складывает нагрузку групп за автоматом генератора и предупреждает: 46,7 А на автомате 16 А. Ассистент объясняет варианты: подать генератор только на инвертор, ограничить ток зарядки или отключать бойлер и стиральную на время работы генератора. Выбор за вами.</p>
+      </div>
+      <div class="shot top"><img src="../../images/backup-table-ru.jpg?v=1122a" width="1060" height="1500" alt="Таблица групп щита дома: автоматы, кабели, нагрузка, ток и потеря напряжения каждой линии"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ВОПРОС 4</div>
+        <h3>«Как объяснить электрику, чего я хочу?»</h3>
+        <p>Лист А3 по ЕСКД вместо рисунка на салфетке: каждый аппарат с обозначением и номиналом, цвета проводов, линии с названиями, таблица групп с кабелями. Перед встречей попросите ассистента проверить схему: он отдельно скажет, что видит программа, а что — его собственная оценка, например заземление, реле обхода инвертора или пусковой ток насоса.</p>
+        <div class="ask"><b>Запрос</b>Проверь схему резервного питания: не пойдёт ли напряжение от генератора или инвертора в сеть, хватит ли инвертора 5 кВт на резервные группы и потянет ли генератор 3 кВт дом.</div>
+      </div>
+      <div class="shot"><img src="../../images/backup-ask-ru.webp?v=1122a" width="1438" height="881" alt="Ассистент проверяет щит дома: генератор и сеть сходятся только на переключателе I–0–II, напряжение в сеть не пойдёт"></div>
+    </article>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">В библиотеке</div>
+      <h2>Всё для щита с резервом</h2>
+    </div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>Инвертор и генератор по ГОСТ</h3>
+        <p>Инвертор, выпрямитель и выпрямитель-инвертор по ГОСТ 2.737, генератор по ГОСТ 2.722. Выводы + и −, L и N — чтобы чертить именно проводку.</p>
+      </div>
+      <div class="plate">
+        <h3>АВР и переключатель «I–0–II»</h3>
+        <p>Автоматический ввод резерва, одно- и трёхфазный, и ручной переключатель ввода с положением «0».</p>
+      </div>
+      <div class="plate">
+        <h3>Защита на вводе</h3>
+        <p>Реле напряжения, УЗИП, УЗО и дифавтоматы — чтобы скачок напряжения не сжёг технику и инвертор.</p>
+      </div>
+      <div class="plate">
+        <h3>Цвета и сечения проводов</h3>
+        <p>L коричневый, N синий, PE жёлто-зелёный, «плюс» и «минус» аккумулятора — красный и чёрный. Сечение — на каждом проводе.</p>
+      </div>
+      <div class="plate">
+        <h3>Таблица групп</h3>
+        <p>Ток, допустимый ток кабеля и потеря напряжения для каждой линии — справочно, с номером таблицы ПУЭ:2026.</p>
+      </div>
+      <div class="plate">
+        <h3>«Автомат защищает провод»</h3>
+        <p>Проверка схемы заметит кабель тоньше своего автомата и группы, которые вместе берут больше, чем выдерживает ввод.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Честно</div>
+      <h2>Безопасность — дело электрика</h2>
+      <p>Opir помогает понять и начертить схему, но не заменяет проект и не проверяет безопасность. Сечения, допустимые токи и потерю напряжения он считает справочно; токи короткого замыкания, селективность и заземление — нет.</p>
+      <p>Ассистент отдельно говорит, что видит программа, а что оценивает сама модель. Подключать щит, генератор и инвертор должен квалифицированный электрик.</p>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="sample" style="padding-top:0">
+  <div class="wrap">
+    <div class="get">
+      <h2>Посмотрите пример</h2>
+      <p>Щит частного дома: сеть и генератор через переключатель «I–0–II», гибридный инвертор с аккумулятором, резервные и обычные группы, таблица групп. PDF открывается где угодно; файл .opir — в Opir, чтобы взять его за основу своего щита.</p>
+      <div class="actions">
+        <a class="btn phosphor" href="../../files/backup-ru.pdf">Пример в PDF</a>
+        <a class="btn ghost" href="../../files/backup-ru.zip" download>Файл .opir</a>
+      </div>
+      <div class="reqs"><span>macOS 15 и новее</span><span>UA · RU · EN</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Вопросы</div>
+      <h2>Что обычно спрашивают</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>А если у меня зарядная станция, а не гибридный инвертор?</summary>
+        <p>Станция — тот же выпрямитель-инвертор с аккумулятором внутри, в библиотеке есть такой символ. Подключайте её к щиту через переключатель, как генератор, а не кабелем «вилка-вилка».</p>
+      </details>
+      <details>
+        <summary>А трёхфазный дом?</summary>
+        <p>Трёхфазные автоматы, УЗО, счётчик, реле напряжения и АВР в библиотеке есть. Ручной переключатель «I–0–II» пока только однофазный.</p>
+      </details>
+      <details>
+        <summary>Ассистент сам начертит схему?</summary>
+        <p>Он расставит аппараты по описанию и соединит выводы сетями. Провода прокладываете вы — вручную или командой «Развести сеть».</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Принципиальные схемы по ЕСКД</span>
+    <a href="../changelog/">Журнал</a>
+    <a href="../mcp/">Настройка MCP</a>
+    <a href="../privacy/">Приватность</a>
+    <a href="mailto:support@opir.dev">support@opir.dev</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+<script src="../../assets/site.js?v=1121b" defer></script>
+</body>
+</html>
