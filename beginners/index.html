@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Перша схема: мигалка на NE555 з поясненнями — Opir</title>
+<meta name="description" content="Намалюйте першу схему й спитайте асистента, що робить кожна деталь, як часто блиматиме світлодіод і чи не згорить він. Перевірка з’єднань і список покупок. Opir для macOS.">
+<link rel="stylesheet" href="../assets/site.css?v=1122t">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/beginners/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/beginners/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/beginners/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/beginners/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Можливості</a>
+      <a href="../cases/">Сценарії</a>
+      <a href="../#assistant">Асистент</a>
+      <a href="../#standards">Стандарти</a>
+      <a href="../#faq">Питання</a>
+      <a href="../changelog/">Журнал</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Мова"><span class="on">UA</span><a href="/ru/beginners/" hreflang="ru">RU</a><a href="/en/beginners/" hreflang="en">EN</a></div>
+      <a class="btn phosphor small" href="../#get">Завантажити</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="caps">Тим, хто тільки починає</div>
+    <h1>Перша схема.<br><b>Без страху</b> — <em>і з поясненнями.</em></h1>
+    <p class="lead">Намалюйте мигалку на NE555 і спитайте асистента, що робить кожна деталь, як часто блиматиме світлодіод і чи не згорить він. Opir перевірить, чи все з’єднано, а перелік елементів стане списком покупок.</p>
+    <div class="actions">
+      <span class="btn phosphor soon"><span class="tag">Скоро</span> Opir для macOS</span>
+      <a class="btn ghost" href="../files/first-uk.pdf">Приклад: мигалка, PDF</a>
+    </div>
+    <p class="note">macOS 15 і новіше</p>
+  </div>
+</section>
+
+<div class="stage">
+  <div class="wrap">
+    <div class="window sheetshot"><img src="../images/first.jpg?v=1122a" width="1800" height="1273" alt="Мигалка на таймері NE555: батарея 9 В, вимикач, резистори R1 і R2, конденсатор C1, світлодіод із резистором R3"></div>
+  </div>
+</div>
+
+<section class="desk" id="steps">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Перші кроки</div>
+      <h2>Чотири питання кожного новачка</h2>
+      <p>Відповіді — прямо в програмі, на вашій схемі.</p>
+    </div>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ПИТАННЯ 1</div>
+        <h3>«Що тут узагалі намальовано?»</h3>
+        <p>Спитайте простими словами — асистент пояснить саме вашу схему: C1 заряджається через R1 і R2, на ⅔ живлення таймер перемикається, світлодіод гасне, C1 розряджається через R2 — і все спочатку. Кожну деталь він називає її позначенням на аркуші.</p>
+        <div class="ask"><b>Запит</b>Я новачок. Поясни простими словами, як працює ця мигалка, як часто блиматиме світлодіод і чи не згорить він. Нічого не змінюй.</div>
+      </div>
+      <div class="shot"><img src="../images/first-ask.webp?v=1122a" width="1438" height="881" alt="Асистент пояснює мигалку простими словами: заряд і розряд конденсатора, частота блимання, струм світлодіода"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ПИТАННЯ 2</div>
+        <h3>«Не згорить світлодіод?»</h3>
+        <p>Асистент рахує: на виході NE555 близько 7,3 В, на червоному світлодіоді близько 2 В, тож через R3 на 470 Ом піде близько 11 мА — менше за допустимі 20 мА. І попереджає: без R3 світлодіод згорить. Частоту теж порахує: близько 1,5 спалаху на секунду. Де дані взято з пам’яті, бо даташита немає, — так і пише.</p>
+      </div>
+      <div class="shot plain"><img src="../images/first-led.jpg?v=1122a" width="1100" height="753" alt="Таймер DA1, з виводу OUT через резистор R3 470 Ом на світлодіод HL1"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ПИТАННЯ 3</div>
+        <h3>«Я все правильно з’єднав?»</h3>
+        <p>«Перевірити схему» знайде непідключений вивід, провід, що висить у повітрі, позначку мережі з одруківкою, мікросхему без живлення. Клацніть по рядку — програма покаже місце на аркуші й підсвітить мережу цілком.</p>
+      </div>
+      <div class="shot"><img src="../images/nets.webp?v=1121b" width="1438" height="898" alt="Під аркушем панель перевірки з помилкою і попередженнями, праворуч список мереж"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">ПИТАННЯ 4</div>
+        <h3>«Що купити?»</h3>
+        <p>Перелік елементів складається зі схеми сам: резистори, конденсатори, мікросхема, світлодіод — з номіналами й кількістю. Роздрукуйте його разом зі схемою або збережіть специфікацію в CSV і йдіть у магазин радіодеталей.</p>
+      </div>
+      <div class="shot top"><img src="../images/first-list.jpg?v=1122a" width="1060" height="1500" alt="Перелік елементів мигалки: резистори, конденсатори, мікросхема, світлодіод, батарея, вимикач"></div>
+    </article>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">І ще</div>
+      <h2>Що допоможе не загубитися</h2>
+    </div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>Пошук деталей</h3>
+        <p>Понад 150 умовних позначень і пошук за назвою: почніть писати «резистор» чи «світлодіод» — і деталь уже в списку.</p>
+      </div>
+      <div class="plate">
+        <h3>Скасування будь-чого</h3>
+        <p>⌘Z повертає як було — і після асистента теж: кожна його правка — один крок.</p>
+      </div>
+      <div class="plate">
+        <h3>Схема з журналу</h3>
+        <p>Сфотографуйте схему з книжки й покладіть під аркуш: креслите поверх, як на кальці.</p>
+      </div>
+      <div class="plate">
+        <h3>Даташит при деталі</h3>
+        <p>Перетягніть PDF на мікросхему — і асистент братиме цоколівку з нього, а не з пам’яті.</p>
+      </div>
+      <div class="plate">
+        <h3>Друк на А4</h3>
+        <p>PDF схеми й переліку — покладіть поруч із макетною платою, поки паяєте.</p>
+      </div>
+      <div class="plate">
+        <h3>Локальна модель</h3>
+        <p>Асистент може працювати з моделлю на вашому Mac у LM Studio чи Ollama — без ключів і без інтернету.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Чесно</div>
+      <h2>Чого Opir не робить</h2>
+      <p>Симуляції немає: програма не покаже, як блимає світлодіод, — для цього є макетна плата. Схеми від мережі 230 В — не для першого досвіду: почніть з батарейки.</p>
+      <p>Асистент пояснює й рахує, але може помилятися — особливо там, де бере дані з пам’яті. Він каже, де саме, а перевірити допоможе даташит.</p>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="sample" style="padding-top:0">
+  <div class="wrap">
+    <div class="get">
+      <h2>Подивіться приклад</h2>
+      <p>Мигалка на NE555: схема й перелік елементів. PDF відкривається будь-де; файл .opir — в Opir, щоб поміняти C1 і подивитися, що скаже асистент.</p>
+      <div class="actions">
+        <a class="btn phosphor" href="../files/first-uk.pdf">Приклад у PDF</a>
+        <a class="btn ghost" href="../files/first-uk.zip" download>Файл .opir</a>
+      </div>
+      <div class="reqs"><span>macOS 15 і новіше</span><span>UA · RU · EN</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Питання</div>
+      <h2>Що зазвичай питають</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Що таке R1, C1, DA1?</summary>
+        <p>Позиційні позначення: літера каже, що це за деталь (R — резистор, C — конденсатор, DA — мікросхема), цифра — її номер. Розставляє їх програма.</p>
+      </details>
+      <details>
+        <summary>Мені треба знати ЄСКД?</summary>
+        <p>Ні. Рамку й основний напис Opir малює сам, а за бажання аркуш можна взяти й без рамки.</p>
+      </details>
+      <details>
+        <summary>Асистент сам намалює схему?</summary>
+        <p>Він поставить деталі за описом і з’єднає їх мережами, а проводи прокладаєте ви — так схема стає своєю і зрозумілою.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Принципові схеми за ЄСКД</span>
+    <a href="../changelog/">Журнал</a>
+    <a href="../mcp/">Налаштування MCP</a>
+    <a href="../privacy/">Приватність</a>
+    <a href="mailto:support@opir.dev">support@opir.dev</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+<script src="../assets/site.js?v=1121b" defer></script>
+</body>
+</html>
