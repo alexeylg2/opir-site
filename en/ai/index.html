@@ -90,25 +90,24 @@
   <div class="wrap">
     <div class="caps">An example</div>
     <h2>Six schematics, one conversation</h2>
-    <p class="lead">A real run through Claude Code over the demo schematics on this site: the assistant found the files, checked every schematic, read the parts lists and summed up the purchase. Thirteen calls to Opir’s tools, and Opir itself was never even opened.</p>
+    <p class="lead">A real run through Claude Code over six projects from this site, from switchboards with backup power to a valve amplifier: the assistant found the files, checked every schematic, read the parts lists and summed up the purchase. Thirteen calls to Opir’s tools, and Opir itself was never even opened.</p>
     <div class="transcript">
-      <div class="msg you"><b>You</b>There are six of my projects in the “Schematics” folder. Check each one and make one list of resistors to order.</div>
+      <div class="msg you"><b>You</b>There are six of my schematics in the “Projects” folder. Check each one and make one bill of materials to order from.</div>
       <div class="calls">
         <span>find_documents</span><span>run_erc × 6</span><span>get_bom × 6</span>
       </div>
       <div class="msg bot"><b>Assistant</b>
-        <p>Found six documents. Check Schematic: five clean; “House board” has one warning: the groups behind the generator breaker QF2 draw 46.7 A together against its 16 A rating.</p>
-        <p>Fixed resistors across the projects: 26 pieces, 16 values:</p>
+        <p>Found six documents, 132 parts in all. Check Schematic:</p>
         <table>
-          <tr><th>Value</th><th>Qty</th><th>Where</th></tr>
-          <tr><td>1 kΩ</td><td>6</td><td>adapter, flasher, single-ended amp, amplifier</td></tr>
-          <tr><td>470 Ω</td><td>2</td><td>flasher, amplifier</td></tr>
-          <tr><td>2.2 kΩ</td><td>2</td><td>adapter, amplifier</td></tr>
-          <tr><td>15 kΩ</td><td>2</td><td>amplifier</td></tr>
-          <tr><td>82 kΩ</td><td>2</td><td>amplifier</td></tr>
-          <tr><td>100 kΩ</td><td>2</td><td>adapter, single-ended amp</td></tr>
+          <tr><th>Project</th><th>Parts</th><th>Check</th></tr>
+          <tr><td>Apartment switchboard with ATS</td><td>24</td><td>2 warnings: the groups behind the incomer QF1 draw 40.3 A against 32 A, behind the backup QF2 40.3 A against 16 A</td></tr>
+          <tr><td>House board with a generator</td><td>25</td><td>1 warning: behind the generator breaker QF2, 46.7 A against 16 A</td></tr>
+          <tr><td>12 V switch-mode supply on UC3843</td><td>29</td><td>clean</td></tr>
+          <tr><td>4 kW fan motor reversing starter</td><td>11</td><td>clean</td></tr>
+          <tr><td>Valve amplifier on 6P3S</td><td>23</td><td>clean</td></tr>
+          <tr><td>Audio amplifier (coursework)</td><td>20</td><td>clean</td></tr>
         </table>
-        <p>Ten more values, one of each: 1, 22, 100, 220 Ω; 1.5, 4.7, 10, 47, 220 and 470 kΩ. Separately, a 470 kΩ pot for the single-ended amp. Shall I put this into a table for the shop?</p>
+        <p>To order: 23 circuit breakers, 5 RCDs, 4 voltage relays, 2 contactors and an overload relay, 3 valves, 4 transformers, 23 resistors and 17 capacitors. Before ordering the breakers, the three warnings are worth sorting out. Shall I put the full list into a table for the supplier?</p>
       </div>
     </div>
     <p class="note-dark">The assistant’s answer is shortened; the figures are the ones Opir’s tools returned.</p>
