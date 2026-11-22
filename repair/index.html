@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ремонт без схеми: перемалювати блок з плати — Opir</title>
+<meta name="description" content="Перемалюйте блок живлення з плати, візьміть цоколівку з даташиту, спитайте асистента, що міряти й у якому порядку, а перелік збереже історію ремонту. Opir для macOS.">
+<link rel="stylesheet" href="../assets/site.css?v=1122t">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/repair/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/repair/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/repair/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/repair/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Можливості</a>
+      <a href="../cases/">Сценарії</a>
+      <a href="../#assistant">Асистент</a>
+      <a href="../#standards">Стандарти</a>
+      <a href="../#faq">Питання</a>
+      <a href="../changelog/">Журнал</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Мова"><span class="on">UA</span><a href="/ru/repair/" hreflang="ru">RU</a><a href="/en/repair/" hreflang="en">EN</a></div>
+      <a class="btn phosphor small" href="../#get">Завантажити</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="caps">Сервісним центрам і майстрам ремонту</div>
+    <h1>Схеми немає.<br><b>Плата</b> — <em>є.</em></h1>
+    <p class="lead">Перемалюйте блок з плати, і він стане зрозумілим: мережі, «гаряча» й «холодна» земля, цоколівка за даташитом. Асистент підкаже, що міряти і в якому порядку, а перелік збереже, що ви вже міняли.</p>
+    <div class="actions">
+      <span class="btn phosphor soon"><span class="tag">Скоро</span> Opir для macOS</span>
+      <a class="btn ghost" href="../files/repair-uk.pdf">Приклад: адаптер 12 В, PDF</a>
+    </div>
+    <p class="note">macOS 15 і новіше</p>
+  </div>
+</section>
+
+<div class="stage">
+  <div class="wrap">
+    <div class="window sheetshot"><img src="../images/repair.jpg?v=1122a" width="1800" height="1273" alt="Мережевий адаптер 12 В 2 А на UC3843, перемальований з плати: вхідний фільтр, міст, ключ, трансформатор, вихід і зворотний зв’язок через оптрон"></div>
+  </div>
+</div>
+
+<section class="desk" id="bench">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Біля паяльника</div>
+      <h2>Чотири ситуації з будь-якого сервісу</h2>
+      <p>І як вони виглядають в Opir.</p>
+    </div>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СИТУАЦІЯ 1</div>
+        <h3>«Схеми на цей блок немає»</h3>
+        <p>Сфотографуйте плату й покладіть фото під аркуш як підкладку. Деталі ставите поверх і з’єднуєте — і замість павутиння доріжок маєте схему. Що прочитано з сумнівом, асистент позначає, щоб ви звірили з платою. «Гарячу» землю первинки й вихідну на схемі видно за різними знаками.</p>
+      </div>
+      <div class="shot"><img src="../images/digitise.webp?v=1121b" width="1438" height="898" alt="Фото схеми під аркушем, деталі поставлені поверх нього, праворуч відповідь асистента"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СИТУАЦІЯ 2</div>
+        <h3>«Не запускається — з чого почати?»</h3>
+        <p>Опишіть, що вже виміряли. Асистент бачить схему й перелік, тож говорить не загалом про імпульсники, а про ваш блок: VCC на виводі 7 DA1, далі пусковий R1, C5, VD3, генератор на виводі 4. І починає з безпеки: міряти відносно мінуса C1, через розділовий трансформатор.</p>
+        <div class="ask"><b>Запит</b>Адаптер не запускається: на виході 0 В, запобіжник цілий, на C1 є 310 В. Що перевіряти і в якому порядку?</div>
+      </div>
+      <div class="shot"><img src="../images/repair-ask.webp?v=1122a" width="1438" height="881" alt="Асистент складає порядок діагностики адаптера, який не запускається: безпека, VCC, пусковий ланцюг"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СИТУАЦІЯ 3</div>
+        <h3>«Яка тут цоколівка?»</h3>
+        <p>Перетягніть даташит на мікросхему — PDF збережеться в документі. Цоколівку й граничні режими асистент бере з нього, з номером сторінки, а не з пам’яті; де даташиту немає, так і каже. Мікросхемі можна дати свій символ з виводами за функціями, як UC3843 тут: номери — за корпусом.</p>
+      </div>
+      <div class="shot plain"><img src="../images/repair-ic.jpg?v=1122a" width="1300" height="675" alt="UC3843 своїм символом: виводи VREF, FB, RT/CT, COMP, OUT, CS, VCC і GND за функціями, номери за корпусом; поруч ключ VT1 і датчик струму R4"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СИТУАЦІЯ 4</div>
+        <h3>«Що в цьому блоці вже міняли?»</h3>
+        <p>Запишіть заміни в примітки — перелік елементів стане картою ремонту: R1 «обрив», C5 «висох». Асистент враховує цю історію: першим він підозрює саме R1, бо резистор на 0,25 Вт там перегрівається. Специфікація закупівлі в CSV — щоб замовити деталі, PDF — для клієнта.</p>
+      </div>
+      <div class="shot top"><img src="../images/repair-list.jpg?v=1122a" width="1060" height="1500" alt="Перелік елементів адаптера з примітками про ремонт: R1 замінено через обрив, C5 — бо висох"></div>
+    </article>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">На робочому місці</div>
+      <h2>Що ще знадобиться</h2>
+    </div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>Мережа цілком</h3>
+        <p>Клацніть мережу в панелі — підсвітяться всі її виводи. Видно, куди йде доріжка, навіть якщо на платі вона ховається під деталлю.</p>
+      </div>
+      <div class="plate">
+        <h3>«Гаряча» і «холодна» земля</h3>
+        <p>Знак корпусу для первинки, ⏚ для виходу: на схемі одразу видно, де проходить ізоляція.</p>
+      </div>
+      <div class="plate">
+        <h3>Перевірка схеми</h3>
+        <p>Непідключені виводи, мережа з одним виводом, два виходи в одній мережі — помилки перемальовування видно ще до паяльника.</p>
+      </div>
+      <div class="plate">
+        <h3>Символ за зразком</h3>
+        <p>Немає деталі в бібліотеці — «Створити за зразком…» на схожій. Виводи й номери — як на корпусі.</p>
+      </div>
+      <div class="plate">
+        <h3>Даташити не губляться</h3>
+        <p>PDF деталі, яку прибрали або замінили, лишається в документі, в окремій теці невикористаних.</p>
+      </div>
+      <div class="plate">
+        <h3>Експорт</h3>
+        <p>PDF для клієнта, специфікація CSV для замовлення, netlist для KiCad і SPICE.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Чесно</div>
+      <h2>Що лишається за вами</h2>
+      <p>Порядок діагностики асистент будує зі схеми й того, що ви розповіли; без даташитів — з пам’яті, і так і каже. Міряти, вирішувати й відповідати за ремонт — вам.</p>
+      <p>Первинна частина імпульсного блока — під мережевою напругою. Розділовий трансформатор, розряджений конденсатор, одна рука в кишені.</p>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="sample" style="padding-top:0">
+  <div class="wrap">
+    <div class="get">
+      <h2>Подивіться приклад</h2>
+      <p>Мережевий адаптер 12 В 2 А на UC3843, перемальований з плати: схема й перелік із записами про ремонт. PDF відкривається будь-де; файл .opir — в Opir.</p>
+      <div class="actions">
+        <a class="btn phosphor" href="../files/repair-uk.pdf">Приклад у PDF</a>
+        <a class="btn ghost" href="../files/repair-uk.zip" download>Файл .opir</a>
+      </div>
+      <div class="reqs"><span>macOS 15 і новіше</span><span>UA · RU · EN</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Питання</div>
+      <h2>Що зазвичай питають</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Чи знає Opir SMD-маркування?</summary>
+        <p>Ні, довідника кодів немає. Асистент може підказати з пам’яті, але це його оцінка — звіряйтеся з даташитом.</p>
+      </details>
+      <details>
+        <summary>Чи можна взяти схему з сервісного мануалу?</summary>
+        <p>Так: скан сторінки під аркуш, і асистент розставить деталі за картинкою. Проводи прокладаєте ви, звіряючись з оригіналом, — так помилку читання легко помітити.</p>
+      </details>
+      <details>
+        <summary>А трасування плат?</summary>
+        <p>Ні. Opir — про принципові схеми; плати лишаються професійним САПР.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Принципові схеми за ЄСКД</span>
+    <a href="../changelog/">Журнал</a>
+    <a href="../mcp/">Налаштування MCP</a>
+    <a href="../privacy/">Приватність</a>
+    <a href="mailto:support@opir.dev">support@opir.dev</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+<script src="../assets/site.js?v=1121b" defer></script>
+</body>
+</html>

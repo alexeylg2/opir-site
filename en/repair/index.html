@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repair without a schematic: redraw the unit from its board — Opir</title>
+<meta name="description" content="Redraw a power supply from its board, take the pinout from the datasheet, ask the assistant what to measure and in what order, and keep the repair history in the parts list. Opir for macOS.">
+<link rel="stylesheet" href="../../assets/site.css?v=1122t">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/repair/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/repair/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/repair/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/repair/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Features</a>
+      <a href="../cases/">Scenarios</a>
+      <a href="../#assistant">Assistant</a>
+      <a href="../#standards">Standards</a>
+      <a href="../#faq">Questions</a>
+      <a href="../changelog/">Journal</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Language"><a href="/repair/" hreflang="uk">UA</a><a href="/ru/repair/" hreflang="ru">RU</a><span class="on">EN</span></div>
+      <a class="btn phosphor small" href="../#get">Download</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="caps">For repair shops and service technicians</div>
+    <h1>No schematic.<br><b>Just</b> <em>the board.</em></h1>
+    <p class="lead">Redraw the unit from its board and it starts to make sense: nets, the hot and the cold ground, pinouts from the datasheet. The assistant suggests what to measure and in what order, and the parts list keeps what you have already replaced.</p>
+    <div class="actions">
+      <span class="btn phosphor soon"><span class="tag">Soon</span> Opir for macOS</span>
+      <a class="btn ghost" href="../../files/repair-en.pdf">Sample: a 12 V adapter, PDF</a>
+    </div>
+    <p class="note">macOS 15 or later</p>
+  </div>
+</section>
+
+<div class="stage">
+  <div class="wrap">
+    <div class="window sheetshot"><img src="../../images/repair-en.jpg?v=1122a" width="1800" height="1273" alt="A 12 V 2 A mains adapter on UC3843, redrawn from its board: input filter, bridge, switch, transformer, output and feedback through an optocoupler"></div>
+  </div>
+</div>
+
+<section class="desk" id="bench">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">At the bench</div>
+      <h2>Four situations from any repair bench</h2>
+      <p>And how they look in Opir.</p>
+    </div>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">CASE 1</div>
+        <h3>“There’s no schematic for this unit”</h3>
+        <p>Photograph the board and put the photo under the sheet as an underlay. Place the parts over it and join them, and instead of a web of traces you have a schematic. What the assistant reads with doubt, it marks for you to check on the board. The primary’s hot ground and the output ground get different signs.</p>
+      </div>
+      <div class="shot"><img src="../../images/digitise-en.webp?v=1121b" width="1438" height="898" alt="A photo of a circuit under the sheet, the parts placed over it, the assistant’s answer on the right"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">CASE 2</div>
+        <h3>“It won’t start. Where do I begin?”</h3>
+        <p>Describe what you have measured. The assistant sees the schematic and the parts list, so it talks about your unit, not switch-mode supplies in general: VCC on pin 7 of DA1, then the start-up resistor R1, C5, VD3, the oscillator on pin 4. And it starts with safety: measure against the minus of C1, through an isolation transformer.</p>
+        <div class="ask"><b>Request</b>The adapter won’t start: 0 V at the output, the fuse is fine, C1 has 310 V. What do I check, and in what order?</div>
+      </div>
+      <div class="shot"><img src="../../images/repair-ask-en.webp?v=1122a" width="1438" height="881" alt="The assistant works out the order of checks for an adapter that won’t start: safety, VCC, the start-up circuit"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">CASE 3</div>
+        <h3>“What’s the pinout here?”</h3>
+        <p>Drop the datasheet on the chip and the PDF is kept in the document. The assistant takes the pinout and the limits from it, with the page number, not from memory; where there is no datasheet, it says so. A chip can get a symbol of its own with pins by function, like the UC3843 here; the numbers are the package’s.</p>
+      </div>
+      <div class="shot plain"><img src="../../images/repair-ic-en.jpg?v=1122a" width="1300" height="675" alt="UC3843 with a symbol of its own: VREF, FB, RT/CT, COMP, OUT, CS, VCC and GND by function, numbers by the package; next to it the switch VT1 and the current sense R4"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">CASE 4</div>
+        <h3>“What’s already been replaced in this unit?”</h3>
+        <p>Write the replacements into the notes and the parts list becomes a repair record: R1 open, C5 dried out. The assistant takes that history into account: R1 is its first suspect, because a 0.25 W resistor overheats there. A bill of materials in CSV to order parts, a PDF for the customer.</p>
+      </div>
+      <div class="shot top"><img src="../../images/repair-list-en.jpg?v=1122a" width="1060" height="1500" alt="The adapter’s parts list with repair notes: R1 replaced for an open, C5 because it dried out"></div>
+    </article>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">On the bench</div>
+      <h2>What else comes in handy</h2>
+    </div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>The whole net</h3>
+        <p>Click a net in the panel and all its pins light up. You see where a trace goes, even where it hides under a part on the board.</p>
+      </div>
+      <div class="plate">
+        <h3>Hot and cold ground</h3>
+        <p>The chassis sign for the primary, ⏚ for the output: the drawing shows at once where the isolation lies.</p>
+      </div>
+      <div class="plate">
+        <h3>Check Schematic</h3>
+        <p>Unconnected pins, a net with one pin, two outputs on one net: mistakes in the redrawing show before you pick up the iron.</p>
+      </div>
+      <div class="plate">
+        <h3>A symbol from a similar one</h3>
+        <p>A part missing from the library? New Symbol from This… on a similar one, with pins and numbers as on the package.</p>
+      </div>
+      <div class="plate">
+        <h3>Datasheets stay put</h3>
+        <p>The PDF of a part you removed or replaced stays in the document, in a folder of unused ones.</p>
+      </div>
+      <div class="plate">
+        <h3>Export</h3>
+        <p>PDF for the customer, a CSV bill of materials for ordering, a netlist for KiCad and SPICE.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Honestly</div>
+      <h2>What stays with you</h2>
+      <p>The assistant builds the order of checks from the schematic and what you have told it; without datasheets, from memory, and it says so. Measuring, deciding and answering for the repair are yours.</p>
+      <p>The primary side of a switch-mode supply sits at mains voltage. An isolation transformer, a discharged capacitor, one hand in your pocket.</p>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="sample" style="padding-top:0">
+  <div class="wrap">
+    <div class="get">
+      <h2>See the sample</h2>
+      <p>A 12 V 2 A mains adapter on UC3843, redrawn from its board: the schematic and a parts list with repair notes. The PDF opens anywhere; the .opir file opens in Opir.</p>
+      <div class="actions">
+        <a class="btn phosphor" href="../../files/repair-en.pdf">Sample as PDF</a>
+        <a class="btn ghost" href="../../files/repair-en.zip" download>The .opir file</a>
+      </div>
+      <div class="reqs"><span>macOS 15 or later</span><span>UA · RU · EN</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Questions</div>
+      <h2>What people usually ask</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Does Opir know SMD marking codes?</summary>
+        <p>No, there is no code book. The assistant may suggest one from memory, but that is its estimate; check it against the datasheet.</p>
+      </details>
+      <details>
+        <summary>Can I take a schematic from a service manual?</summary>
+        <p>Yes: put the scanned page under the sheet and the assistant places the parts from the picture. You lay the wires against the original, which makes a misreading easy to spot.</p>
+      </details>
+      <details>
+        <summary>And PCB layout?</summary>
+        <p>No. Opir is about schematics; boards stay with professional PCB tools.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Schematic diagrams, drawn to standard</span>
+    <a href="../changelog/">Journal</a>
+    <a href="../mcp/">MCP setup</a>
+    <a href="../privacy/">Privacy</a>
+    <a href="mailto:support@opir.dev">support@opir.dev</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+<script src="../../assets/site.js?v=1121b" defer></script>
+</body>
+</html>
