@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Opir — schematic diagrams for macOS</title>
 <meta name="description" content="Opir is a schematic editor for macOS: drawings to ESKD with GOST or US symbols, an assistant that builds a circuit from a description, switchboards with a table of groups.">
-<link rel="stylesheet" href="../assets/site.css?v=1121d">
+<link rel="stylesheet" href="../assets/site.css?v=1122t">
 <link rel="alternate" hreflang="uk" href="https://opir.dev/">
 <link rel="alternate" hreflang="ru" href="https://opir.dev/ru/">
 <link rel="alternate" hreflang="en" href="https://opir.dev/en/">
@@ -24,7 +24,7 @@
     </a>
     <nav>
       <a href="#what">Features</a>
-      <a href="#cases">Scenarios</a>
+      <a href="cases/">Scenarios</a>
       <a href="#assistant">Assistant</a>
       <a href="#standards">Standards</a>
       <a href="#faq">Questions</a>
@@ -55,7 +55,25 @@
   </div>
 </div>
 
-<section class="paper" id="what">
+<section class="paper" id="who">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Who it is for</div>
+      <h2>For the job you do</h2>
+      <p>Everyone has their own headache. Here is how Opir deals with yours.</p>
+    </div>
+    <div class="who">
+      <a class="plate" href="students/">
+        <div class="caps">Students</div>
+        <h3>ESKD coursework</h3>
+        <p>The parts list is built from the schematic, the title block fills itself, and before the defence the assistant explains how the circuit works.</p>
+        <span class="more">Read more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="what" style="padding-top:0">
   <div class="wrap">
     <div class="head">
       <div class="caps">What it is</div>
@@ -102,56 +120,6 @@
         </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="desk" id="cases">
-  <div class="wrap">
-    <div class="head">
-      <div class="caps">Scenarios</div>
-      <h2>What it looks like at work</h2>
-      <p>Four jobs Opir takes from start to finish.</p>
-    </div>
-
-    <article class="sheet">
-      <div class="words">
-        <div class="no">SCENARIO 01</div>
-        <h3>An apartment switchboard from one request</h3>
-        <p>Three phases, a meter, surge protection, voltage relays, three RCDs, eight groups, a backup supply through a transfer switch. The assistant places the devices, connects them and fills in the line data. The wires are yours to draw — or the Route Net command’s.</p>
-        <div class="ask"><b>Request</b>Build an apartment switchboard. Three-phase 400 V supply, a C32 main breaker, a meter, surge protection, voltage relays. Three RCDs, eight groups…</div>
-      </div>
-      <div class="shot fit"><img src="../images/board-en.jpg?v=1122a" width="1800" height="1272" alt="The apartment switchboard schematic, built by the assistant and wired"></div>
-    </article>
-
-    <article class="sheet">
-      <div class="words">
-        <div class="no">SCENARIO 02</div>
-        <h3>A table of groups that does the sums</h3>
-        <p>For every line — its breaker, cable, length and load. Opir works out the current, the cable’s permissible current and the voltage drop, and shows where a breaker does not protect its wire.</p>
-      </div>
-      <div class="shot top"><img src="../images/table-en.jpg?v=1121l" width="1060" height="1500" alt="The switchboard’s table of groups: breakers, cables, sections, currents and voltage drop"></div>
-    </article>
-
-    <article class="sheet">
-      <div class="words">
-        <div class="no">SCENARIO 03</div>
-        <h3>A schematic check at the press of Space</h3>
-        <p>Unconnected pins, duplicate designators, nets with two names, an overloaded supply. A click on a row shows the place on the sheet; a picked net lights up whole.</p>
-      </div>
-      <div class="shot"><img src="../images/nets-en.webp?v=1121b" width="1438" height="898" alt="A timer relay schematic on an NE555: the check panel under the sheet with an error and warnings, the list of nets on the right"></div>
-    </article>
-
-    <article class="sheet">
-      <div class="words">
-        <div class="no">SCENARIO 04</div>
-        <h3>An old schematic from a photo</h3>
-        <p>Drop in a photo from an old magazine. The assistant reads the parts and nets and places them as the original has them. You lay the wires, checking against the picture: that is how the circuit becomes clear, and a misreading is easy to spot.</p>
-        <div class="formats" aria-label="Export">
-          <span>PDF</span><span>SVG</span><span>PNG</span><span>KiCad</span><span>SPICE</span><span>JSON</span><span>CSV</span>
-        </div>
-      </div>
-      <div class="shot"><img src="../images/digitise-en.webp?v=1121b" width="1438" height="898" alt="Digitising: a photo of a multivibrator schematic from an old magazine under the sheet, the parts placed over it, the assistant’s answer on the right"></div>
-    </article>
   </div>
 </section>
 

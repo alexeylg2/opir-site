@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сценарии — Opir</title>
+<meta name="description" content="Как Opir работает на реальных задачах: щит квартиры по одному запросу, таблица групп, проверка схемы, оцифровка старой схемы с фотографии.">
+<link rel="stylesheet" href="../../assets/site.css?v=1122t">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/cases/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/cases/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/cases/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/cases/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Возможности</a>
+      <a href="../cases/">Сценарии</a>
+      <a href="../#assistant">Ассистент</a>
+      <a href="../#standards">Стандарты</a>
+      <a href="../#faq">Вопросы</a>
+      <a href="../changelog/">Журнал</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Язык"><a href="/cases/" hreflang="uk">UA</a><span class="on">RU</span><a href="/en/cases/" hreflang="en">EN</a></div>
+      <a class="btn phosphor small" href="../#get">Скачать</a>
+    </div>
+  </div>
+</header>
+
+<section class="desk" id="cases">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Сценарии</div>
+      <h1>Как это выглядит в работе</h1>
+      <p>Четыре задачи, которые Opir закрывает от начала до конца.</p>
+    </div>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СЦЕНАРИЙ 01</div>
+        <h3>Щит квартиры по одному запросу</h3>
+        <p>Три фазы, счётчик, УЗИП, реле напряжения, три УЗО, восемь групп, резервный ввод через АВР. Ассистент ставит аппараты, соединяет их и заполняет данные линий. Провода чертите вы — или команда «Развести сеть».</p>
+        <div class="ask"><b>Запрос</b>Собери щит квартиры. Ввод три фазы 400 В, вводной автомат C32, счётчик, УЗИП, реле напряжения. Три УЗО, восемь групп…</div>
+      </div>
+      <div class="shot fit"><img src="../../images/board-ru.jpg?v=1121l" width="1800" height="1272" alt="Схема щита квартиры, собранная ассистентом и разведённая"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СЦЕНАРИЙ 02</div>
+        <h3>Таблица групп, которая считает сама</h3>
+        <p>Для каждой линии — автомат, кабель, длина и нагрузка. Opir считает ток, допустимый ток кабеля и потерю напряжения и показывает, где автомат не защищает провод.</p>
+      </div>
+      <div class="shot top"><img src="../../images/table-ru.jpg?v=1121l" width="1060" height="1500" alt="Таблица групп щита: автоматы, кабели, сечения, токи и потеря напряжения"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СЦЕНАРИЙ 03</div>
+        <h3>Проверка схемы одним пробелом</h3>
+        <p>Неподключённые выводы, дубли обозначений, сети с двумя именами, перегруженный ввод. Щелчок по строке показывает место на листе; выбранная сеть подсвечивается целиком.</p>
+      </div>
+      <div class="shot"><img src="../../images/nets-ru.webp?v=1121b" width="1438" height="898" alt="Схема реле времени на таймере NE555: под листом панель проверки с ошибкой и предупреждениями, справа список сетей"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">СЦЕНАРИЙ 04</div>
+        <h3>Старая схема с фотографии</h3>
+        <p>Перетащите фото из старого журнала. Ассистент прочитает детали и сети и поставит их так, как на оригинале. Провода прокладываете вы, сверяясь с картинкой: так схема становится понятной, а ошибку чтения легко заметить.</p>
+        <div class="formats" aria-label="Экспорт">
+          <span>PDF</span><span>SVG</span><span>PNG</span><span>KiCad</span><span>SPICE</span><span>JSON</span><span>CSV</span>
+        </div>
+      </div>
+      <div class="shot"><img src="../../images/digitise-ru.webp?v=1121b" width="1438" height="898" alt="Оцифровка: фото схемы мультивибратора из старого журнала под листом, детали поставлены поверх него, справа ответ ассистента"></div>
+    </article>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Для кого</div>
+      <h2>Сценарии под вашу задачу</h2>
+    </div>
+    <div class="who">
+      <a class="plate" href="../students/">
+        <div class="caps">Студентам</div>
+        <h3>Курсовой по ЕСКД</h3>
+        <p>Перечень ПЭ3 строится по схеме, основная надпись заполняется сама, а перед защитой ассистент объясняет, как работает схема.</p>
+        <span class="more">Подробнее →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Принципиальные схемы по ЕСКД</span>
+    <a href="../changelog/">Журнал</a>
+    <a href="../mcp/">Настройка MCP</a>
+    <a href="../privacy/">Приватность</a>
+    <a href="mailto:support@opir.dev">support@opir.dev</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+<script src="../../assets/site.js?v=1121b" defer></script>
+</body>
+</html>

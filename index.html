@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Opir — принципові схеми за ЄСКД для macOS</title>
 <meta name="description" content="Opir — редактор принципових електричних схем для macOS: креслення за ЄСКД, асистент, що збирає схему за описом, електрощити з таблицею груп.">
-<link rel="stylesheet" href="assets/site.css?v=1121d">
+<link rel="stylesheet" href="assets/site.css?v=1122t">
 <link rel="alternate" hreflang="uk" href="https://opir.dev/">
 <link rel="alternate" hreflang="ru" href="https://opir.dev/ru/">
 <link rel="alternate" hreflang="en" href="https://opir.dev/en/">
@@ -24,7 +24,7 @@
     </a>
     <nav>
       <a href="#what">Можливості</a>
-      <a href="#cases">Сценарії</a>
+      <a href="cases/">Сценарії</a>
       <a href="#assistant">Асистент</a>
       <a href="#standards">Стандарти</a>
       <a href="#faq">Питання</a>
@@ -55,7 +55,25 @@
   </div>
 </div>
 
-<section class="paper" id="what">
+<section class="paper" id="who">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Для кого</div>
+      <h2>Під вашу задачу</h2>
+      <p>У кожного свій біль. Ось як Opir закриває ваш.</p>
+    </div>
+    <div class="who">
+      <a class="plate" href="students/">
+        <div class="caps">Студентам</div>
+        <h3>Курсовий за ЄСКД</h3>
+        <p>Перелік ПЕ3 будується зі схеми, основний напис заповнюється сам, а перед захистом асистент пояснює, як працює схема.</p>
+        <span class="more">Докладніше →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="paper" id="what" style="padding-top:0">
   <div class="wrap">
     <div class="head">
       <div class="caps">Що це</div>
@@ -102,56 +120,6 @@
         </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="desk" id="cases">
-  <div class="wrap">
-    <div class="head">
-      <div class="caps">Сценарії</div>
-      <h2>Як це виглядає в роботі</h2>
-      <p>Чотири задачі, які Opir закриває від початку до кінця.</p>
-    </div>
-
-    <article class="sheet">
-      <div class="words">
-        <div class="no">СЦЕНАРІЙ 01</div>
-        <h3>Щит квартири за одним запитом</h3>
-        <p>Три фази, лічильник, ПЗІП, реле напруги, три ПЗВ, вісім груп, резервний ввід через АВР. Асистент ставить апарати, з’єднує їх і заповнює дані ліній. Проводи креслите ви — або команда «Розвести мережу».</p>
-        <div class="ask"><b>Запит</b>Збери щит квартири. Ввід три фази 400 В, ввідний автомат C32, лічильник, ПЗІП, реле напруги. Три ПЗВ, вісім груп…</div>
-      </div>
-      <div class="shot fit"><img src="images/board.jpg?v=1121l" width="1800" height="1272" alt="Схема щита квартири, зібрана асистентом і розведена"></div>
-    </article>
-
-    <article class="sheet">
-      <div class="words">
-        <div class="no">СЦЕНАРІЙ 02</div>
-        <h3>Таблиця груп, яка рахує сама</h3>
-        <p>Для кожної лінії — автомат, кабель, довжина й навантаження. Opir рахує струм, допустимий струм кабелю і втрату напруги та показує, де автомат не захищає провід.</p>
-      </div>
-      <div class="shot top"><img src="images/table.jpg?v=1121l" width="1060" height="1500" alt="Таблиця груп щита: автомати, кабелі, перерізи, струми і втрата напруги"></div>
-    </article>
-
-    <article class="sheet">
-      <div class="words">
-        <div class="no">СЦЕНАРІЙ 03</div>
-        <h3>Перевірка схеми одним пробілом</h3>
-        <p>Непідключені виводи, дублі позначень, мережі з двома іменами, перевантажений ввід. Клацання по рядку показує місце на аркуші; вибрана мережа підсвічується цілком.</p>
-      </div>
-      <div class="shot"><img src="images/nets.webp?v=1121b" width="1438" height="898" alt="Схема реле часу на таймері NE555: під аркушем панель перевірки з помилкою і попередженнями, праворуч список мереж"></div>
-    </article>
-
-    <article class="sheet">
-      <div class="words">
-        <div class="no">СЦЕНАРІЙ 04</div>
-        <h3>Стара схема з фотографії</h3>
-        <p>Перетягніть фото зі старого журналу. Асистент прочитає деталі й мережі та поставить їх так, як на оригіналі. Проводи прокладаєте ви, звіряючись із картинкою: так схема стає зрозумілою, а помилку читання легко помітити.</p>
-        <div class="formats" aria-label="Експорт">
-          <span>PDF</span><span>SVG</span><span>PNG</span><span>KiCad</span><span>SPICE</span><span>JSON</span><span>CSV</span>
-        </div>
-      </div>
-      <div class="shot"><img src="images/digitise.webp?v=1121b" width="1438" height="898" alt="Оцифрування: фото схеми мультивібратора зі старого журналу під аркушем, деталі поставлені поверх нього, праворуч відповідь асистента"></div>
-    </article>
   </div>
 </section>
 

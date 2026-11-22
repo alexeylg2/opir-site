@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scenarios — Opir</title>
+<meta name="description" content="How Opir works on real jobs: an apartment switchboard from one request, the table of groups, checking a schematic, digitising an old schematic from a photo.">
+<link rel="stylesheet" href="../../assets/site.css?v=1122t">
+<link rel="alternate" hreflang="uk" href="https://opir.dev/cases/">
+<link rel="alternate" hreflang="ru" href="https://opir.dev/ru/cases/">
+<link rel="alternate" hreflang="en" href="https://opir.dev/en/cases/">
+<link rel="alternate" hreflang="x-default" href="https://opir.dev/cases/">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../" aria-label="Opir">
+      <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+        <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+        <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+      </svg>
+    </a>
+    <nav>
+      <a href="../#what">Features</a>
+      <a href="../cases/">Scenarios</a>
+      <a href="../#assistant">Assistant</a>
+      <a href="../#standards">Standards</a>
+      <a href="../#faq">Questions</a>
+      <a href="../changelog/">Journal</a>
+    </nav>
+    <div class="right">
+      <div class="langs" aria-label="Language"><a href="/cases/" hreflang="uk">UA</a><a href="/ru/cases/" hreflang="ru">RU</a><span class="on">EN</span></div>
+      <a class="btn phosphor small" href="../#get">Download</a>
+    </div>
+  </div>
+</header>
+
+<section class="desk" id="cases">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Scenarios</div>
+      <h1>How it looks at work</h1>
+      <p>Four jobs Opir takes from start to finish.</p>
+    </div>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">SCENARIO 01</div>
+        <h3>An apartment switchboard from one request</h3>
+        <p>Three phases, a meter, surge protection, voltage relays, three RCDs, eight groups, a backup supply through a transfer switch. The assistant places the devices, connects them and fills in the line data. The wires are yours to draw — or the Route Net command’s.</p>
+        <div class="ask"><b>Request</b>Build an apartment switchboard. Three-phase 400 V supply, a C32 main breaker, a meter, surge protection, voltage relays. Three RCDs, eight groups…</div>
+      </div>
+      <div class="shot fit"><img src="../../images/board-en.jpg?v=1122a" width="1800" height="1272" alt="The apartment switchboard schematic, built by the assistant and wired"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">SCENARIO 02</div>
+        <h3>A table of groups that does the sums</h3>
+        <p>For every line — its breaker, cable, length and load. Opir works out the current, the cable’s permissible current and the voltage drop, and shows where a breaker does not protect its wire.</p>
+      </div>
+      <div class="shot top"><img src="../../images/table-en.jpg?v=1121l" width="1060" height="1500" alt="The switchboard’s table of groups: breakers, cables, sections, currents and voltage drop"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">SCENARIO 03</div>
+        <h3>A schematic check at the press of Space</h3>
+        <p>Unconnected pins, duplicate designators, nets with two names, an overloaded supply. A click on a row shows the place on the sheet; a picked net lights up whole.</p>
+      </div>
+      <div class="shot"><img src="../../images/nets-en.webp?v=1121b" width="1438" height="898" alt="A timer relay schematic on an NE555: the check panel under the sheet with an error and warnings, the list of nets on the right"></div>
+    </article>
+
+    <article class="sheet">
+      <div class="words">
+        <div class="no">SCENARIO 04</div>
+        <h3>An old schematic from a photo</h3>
+        <p>Drop in a photo from an old magazine. The assistant reads the parts and nets and places them as the original has them. You lay the wires, checking against the picture: that is how the circuit becomes clear, and a misreading is easy to spot.</p>
+        <div class="formats" aria-label="Export">
+          <span>PDF</span><span>SVG</span><span>PNG</span><span>KiCad</span><span>SPICE</span><span>JSON</span><span>CSV</span>
+        </div>
+      </div>
+      <div class="shot"><img src="../../images/digitise-en.webp?v=1121b" width="1438" height="898" alt="Digitising: a photo of a multivibrator schematic from an old magazine under the sheet, the parts placed over it, the assistant’s answer on the right"></div>
+    </article>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Who it is for</div>
+      <h2>Scenarios for the job you do</h2>
+    </div>
+    <div class="who">
+      <a class="plate" href="../students/">
+        <div class="caps">Students</div>
+        <h3>ESKD coursework</h3>
+        <p>The parts list is built from the schematic, the title block fills itself, and before the defence the assistant explains how the circuit works.</p>
+        <span class="more">Read more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <svg class="mark" viewBox="-13 -1 28 15" role="img" aria-label="Opir">
+      <circle cx="-7" cy="5" r="5" fill="#B8F23A"/>
+      <path d="M0.5,3.5 V12.5 M0.5,3.5 H2.5 A2,2 0 0 1 4.5,5.5 V7.5 A2,2 0 0 1 2.5,9.5 H0.5 M7.5,3.5 V9.5 M10.5,3.5 V9.5 M10.5,5.5 A2,2 0 0 1 12.5,3.5 H13.5" fill="none" stroke="#F3F3F8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="0.6" r="0.6" fill="#F3F3F8"/>
+    </svg>
+    <span>Schematic diagrams, drawn to standard</span>
+    <a href="../changelog/">Journal</a>
+    <a href="../mcp/">MCP setup</a>
+    <a href="../privacy/">Privacy</a>
+    <a href="mailto:support@opir.dev">support@opir.dev</a>
+    <span class="right">opir.dev</span>
+  </div>
+</footer>
+
+<script src="../../assets/site.js?v=1121b" defer></script>
+</body>
+</html>

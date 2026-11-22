@@ -93,6 +93,18 @@ p { margin: 0; text-wrap: pretty; }
 .hero .lead { max-width: 660px; margin: 22px auto 0; font-size: 20px; line-height: 1.5; color: var(--muted-on-graphite); }
 .hero .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
 .hero .note { margin-top: 18px; font: 13px/1.4 var(--mono); color: #7b8092; }
+.hero .caps { color: var(--phosphor); margin-bottom: 18px; }
+/* A whole sheet of a drawing on the desk, instead of a window: a white sheet has no corners of its own to keep. */
+.window.sheetshot { border-radius: 6px; background: #fff; }
+
+/* ——— Who it is for: cards that lead to a page of their own ——— */
+.who { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+a.plate { display: flex; flex-direction: column; color: var(--title); transition: border-color .15s, box-shadow .15s; }
+a.plate:hover { text-decoration: none; border-color: var(--violet); box-shadow: 0 8px 24px rgba(28,29,38,0.08); }
+a.plate .caps { margin-bottom: 10px; }
+a.plate .more { margin-top: auto; padding-top: 18px; font-weight: 600; color: var(--violet); }
+.pillars.small .plate h3 { font-size: 18px; }
+.get .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 /* ——— The stage: the slate desk the window stands on ——— */
 .stage {
@@ -112,7 +124,7 @@ p { margin: 0; text-wrap: pretty; }
 /* ——— Sections on tracing paper ——— */
 section.paper { padding: 92px 0; }
 .head { max-width: 720px; margin-bottom: 44px; }
-.head h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.12; font-weight: 700; margin-top: 12px; }
+.head h1, .head h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.12; font-weight: 700; margin-top: 12px; }
 .head p { margin-top: 14px; font-size: 19px; color: var(--subtitle); }
 
 .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
@@ -137,7 +149,7 @@ section.paper { padding: 92px 0; }
   background-blend-mode: soft-light, normal;
   padding: 92px 0;
 }
-.desk .head h2 { color: #fff; }
+.desk .head h1, .desk .head h2 { color: #fff; }
 .desk .head p { color: #E3E5F0; }
 .desk .caps { color: #D5D8E8; }
 .sheet {
@@ -161,7 +173,9 @@ section.paper { padding: 92px 0; }
 .shot { border-radius: 8px; overflow: hidden; box-shadow: 0 0 0 1px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.45); }
 .shot img { width: 100%; height: auto; }
 /* A shot of a whole window: cut inside the window's own round corners, as on the main one. */
-.shot:not(.fit):not(.top):not(.todo) { border-radius: 2% / 3.2%; }
+.shot:not(.fit):not(.top):not(.todo):not(.plain) { border-radius: 2% / 3.2%; }
+/* A piece of a drawing (a title block, a corner of a schematic), not a window: plain corners. */
+.shot.plain { background: #fff; }
 .shot.top img { aspect-ratio: 16 / 10; object-fit: cover; object-position: 50% 0; }
 .shot.fit img { aspect-ratio: 1800 / 1272; object-fit: contain; }
 .shot.todo {
@@ -246,7 +260,7 @@ footer .right { margin-left: auto; font-family: var(--mono); font-size: 12.5px; 
   .hero .lead { font-size: 18px; }
   .window { margin-top: -110px; }
   section.paper, .desk, .assistant { padding: 64px 0; }
-  .pillars, .honest, .assistant .cols { grid-template-columns: 1fr; }
+  .pillars, .honest, .who, .assistant .cols { grid-template-columns: 1fr; }
   .sheet { grid-template-columns: 1fr; padding: 24px; gap: 22px; }
   .sheet:nth-of-type(even) .words { order: 0; }
   .get { padding: 40px 22px; }
