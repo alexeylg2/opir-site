@@ -49,8 +49,37 @@
 
     <!-- journal -->
     <article class="entry">
+      <time datetime="2026-11-24">24 November 2026</time>
+      <ul>
+        <li><b class="kind new">New</b><span>The library holds 650 symbols. Valves: 46 new ones, thirteen of them as halves of the envelope, as in old magazines; the common ones have pin numbers.</span></li>
+        <li><b class="kind new">New</b><span>Motors, antennas, functional blocks to GOST 2.737, sensors and modules for Arduino: 64 symbols.</span></li>
+        <li><b class="kind changed">Changed</b><span>Valve cathodes and heaters, the three-phase motor (“3∼”) and the ferrite antenna are redrawn after GOST. In existing documents, after Update Symbols from Library.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
+      <time datetime="2026-11-23">23 November 2026</time>
+      <ul>
+        <li><b class="kind new">New</b><span>The library grew from 159 to 540 symbols: semiconductors, passive parts, switching and connectors, digital, analog and power ICs, controllers, modules, sources, indicators, meters, switchboards.</span></li>
+        <li><b class="kind changed">Changed</b><span>Ground, chassis and protective earth have names of their own (GND, CHASSIS, PE) and no longer join through a shared one. Signs already on sheets are unchanged.</span></li>
+        <li><b class="kind new">New</b><span>Neutral (N) is among the earth signs. G again, with the tool in hand, takes the next sign.</span></li>
+        <li><b class="kind new">New</b><span>New checks: different earths on one net, a neutral on PE, a power sign that touches nothing, a cable whose section is not the wires’, a wire in another conductor’s colour.</span></li>
+        <li><b class="kind new">New</b><span>MCP: a client can make a new document, in an Opir window or as a file. A section and a colour can be given to one branch of a net.</span></li>
+        <li><b class="kind changed">Changed</b><span>In switchboards the assistant puts the neutral on a bar, offers to mend a poor drawing and reports wire ends left loose.</span></li>
+        <li><b class="kind changed">Changed</b><span>The Net tool joins a pin to a wire as well. A name a net got from a ground or supply sign goes with the last such sign.</span></li>
+        <li><b class="kind changed">Changed</b><span>The assistant’s symbol search finds near matches even when the library does not know one of the words.</span></li>
+        <li><b class="kind changed">Changed</b><span>Redrawn after GOST: transformer cores, the electrolytic capacitor, the trimmer, the dinistor, optocouplers, the diode bridge, the comparator, the bell, headphones and the neon lamp.</span></li>
+        <li><b class="kind changed">Changed</b><span>Local models are removed: they too often built circuits from scratch with mistakes. The assistant works through Anthropic, OpenAI or a compatible service with your key.</span></li>
+        <li><b class="kind fixed">Fixed</b><span>Board checks pass through a current transformer: the breakers after it count in the supply’s load.</span></li>
+        <li><b class="kind fixed">Fixed</b><span>Layout by signal puts the power source beside the circuit, not under its input.</span></li>
+      </ul>
+    </article>
+    <article class="entry">
       <time datetime="2026-11-22">22 November 2026</time>
       <ul>
+        <li><b class="kind new">New</b><span>A welcome on the first launch and in the Help menu: drawings, nets, switchboards, the assistant.</span></li>
+        <li><b class="kind new">New</b><span>Help → Write to the Author opens a feedback form.</span></li>
+        <li><b class="kind fixed">Fixed</b><span>The assistant works again with OpenAI’s newest models.</span></li>
+        <li><b class="kind changed">Changed</b><span>The check panel lies over the foot of the sheet and no longer moves it.</span></li>
         <li><b class="kind fixed">Fixed</b><span>Valves get their own group in the parts list, “Vacuum tubes”.</span></li>
         <li><b class="kind new">New</b><span>A three-phase motor to GOST 2.722: a circle with M and leads U1, V1, W1.</span></li>
         <li><b class="kind fixed">Fixed</b><span>Contactors, overload, time and voltage relays and circuit breakers get their own group headings in the parts list instead of the first part’s name.</span></li>
