@@ -107,7 +107,48 @@
   </div>
 </section>
 
-<section class="paper">
+<section class="paper" id="receiver">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Наступна схема</div>
+      <h2>Шлях сигналу: від антени до навушника</h2>
+      <p>AM-приймач на двох транзисторах. Біля кожного вузла намальовано, який там сигнал: видно, як із радіохвилі стає звук. Форми сигналів — у бібліотеці, 43 знаки.</p>
+    </div>
+    <div class="plate" style="margin:0 0 18px;padding:8px;overflow-x:auto;background:#fff"><img style="display:block;width:100%;min-width:860px;height:auto;max-width:none" src="../images/receiver.jpg?v=1124a" width="2200" height="672" alt="AM-приймач: антена, контур L1C2, детектор VD1, регулятор гучності R1, підсилювач на VT1 і VT2, навушник; біля вузлів намальовано форми сигналів"></div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>1. Антена</h3>
+        <p>Провід WA1 ловить усі станції разом — мікровольти. C1 на 10 пФ зв’язує антену з контуром слабко, щоб вона його не розладнала.</p>
+      </div>
+      <div class="plate">
+        <h3>2. Коливальний контур</h3>
+        <p>L1 і C2 резонують на одній частоті: її станція лишається, решта слабшає. Обертаєте C2 — шукаєте станцію на середніх хвилях.</p>
+      </div>
+      <div class="plate">
+        <h3>3. Детектор</h3>
+        <p>VD1 пропускає лише одну півхвилю, а C3 згладжує радіочастоту. Лишається обвідна — звук, що їхав на хвилі, і постійна складова.</p>
+      </div>
+      <div class="plate">
+        <h3>4. Гучність</h3>
+        <p>R1 бере потрібну частку звуку, C4 не пускає далі постійну складову — інакше вона зсунула б режим VT1.</p>
+      </div>
+      <div class="plate">
+        <h3>5. Підсилення напруги</h3>
+        <p>VT1 збільшує мілівольти приблизно в 90 разів. R2 і R3 задають режим, R5 його стабілізує, C5 повертає підсилення звукові.</p>
+      </div>
+      <div class="plate">
+        <h3>6. Навушник</h3>
+        <p>VT2 напруги не додає, зате дає струм: без нього навушник на 32–64 Ом «посадив» би перший каскад. C6 пропускає у BF1 лише звук.</p>
+      </div>
+    </div>
+    <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+      <a class="btn phosphor" href="../files/receiver-uk.pdf">Приймач у PDF</a>
+      <a class="btn ghost" style="color:#1C1D26;box-shadow:inset 0 0 0 1px #C9C9D6" href="../files/receiver-uk.zip" download>Файл .opir</a>
+    </div>
+  </div>
+</section>
+
+<section class="paper" style="padding-top:0">
   <div class="wrap">
     <div class="head">
       <div class="caps">І ще</div>

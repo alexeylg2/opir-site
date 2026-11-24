@@ -107,7 +107,48 @@
   </div>
 </section>
 
-<section class="paper">
+<section class="paper" id="receiver">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">The next circuit</div>
+      <h2>The signal’s path: from the antenna to the earphone</h2>
+      <p>An AM receiver on two transistors. By every node the sheet shows the signal there, so you see a radio wave turn into sound. The signal forms are in the library, 43 of them.</p>
+    </div>
+    <div class="plate" style="margin:0 0 18px;padding:8px;overflow-x:auto;background:#fff"><img style="display:block;width:100%;min-width:860px;height:auto;max-width:none" src="../../images/receiver-en.jpg?v=1124a" width="2200" height="672" alt="AM receiver: antenna, tuned circuit L1C2, detector VD1, volume control R1, amplifier on VT1 and VT2, earphone; signal forms drawn by the nodes"></div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>1. The antenna</h3>
+        <p>The wire WA1 picks up every station at once, in microvolts. C1, 10 pF, couples it to the tuned circuit loosely, so as not to detune it.</p>
+      </div>
+      <div class="plate">
+        <h3>2. The tuned circuit</h3>
+        <p>L1 and C2 resonate at one frequency: its station stays, the rest fade. Turn C2 to search the medium waves.</p>
+      </div>
+      <div class="plate">
+        <h3>3. The detector</h3>
+        <p>VD1 passes one half of the wave, and C3 smooths out the radio frequency. What is left is the envelope, the sound the wave carried, plus a DC part.</p>
+      </div>
+      <div class="plate">
+        <h3>4. Volume</h3>
+        <p>R1 takes as much of the sound as you want, and C4 stops the DC part, which would shift VT1’s operating point.</p>
+      </div>
+      <div class="plate">
+        <h3>5. Voltage gain</h3>
+        <p>VT1 multiplies the millivolts by about 90. R2 and R3 set the operating point, R5 keeps it steady, C5 gives the audio its gain back.</p>
+      </div>
+      <div class="plate">
+        <h3>6. The earphone</h3>
+        <p>VT2 adds no voltage but supplies current: without it a 32–64 Ω earphone would drag the first stage down. C6 lets only the sound into BF1.</p>
+      </div>
+    </div>
+    <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+      <a class="btn phosphor" href="../../files/receiver-en.pdf">The receiver in PDF</a>
+      <a class="btn ghost" style="color:#1C1D26;box-shadow:inset 0 0 0 1px #C9C9D6" href="../../files/receiver-en.zip" download>.opir file</a>
+    </div>
+  </div>
+</section>
+
+<section class="paper" style="padding-top:0">
   <div class="wrap">
     <div class="head">
       <div class="caps">And more</div>

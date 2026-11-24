@@ -107,7 +107,48 @@
   </div>
 </section>
 
-<section class="paper">
+<section class="paper" id="receiver">
+  <div class="wrap">
+    <div class="head">
+      <div class="caps">Следующая схема</div>
+      <h2>Путь сигнала: от антенны до наушника</h2>
+      <p>AM-приёмник на двух транзисторах. У каждого узла нарисовано, какой там сигнал: видно, как из радиоволны получается звук. Формы сигналов — в библиотеке, 43 знака.</p>
+    </div>
+    <div class="plate" style="margin:0 0 18px;padding:8px;overflow-x:auto;background:#fff"><img style="display:block;width:100%;min-width:860px;height:auto;max-width:none" src="../../images/receiver-ru.jpg?v=1124a" width="2200" height="672" alt="AM-приёмник: антенна, контур L1C2, детектор VD1, регулятор громкости R1, усилитель на VT1 и VT2, наушник; у узлов нарисованы формы сигналов"></div>
+    <div class="pillars small">
+      <div class="plate">
+        <h3>1. Антенна</h3>
+        <p>Провод WA1 ловит все станции сразу — микровольты. C1 на 10 пФ связывает антенну с контуром слабо, чтобы она его не расстроила.</p>
+      </div>
+      <div class="plate">
+        <h3>2. Колебательный контур</h3>
+        <p>L1 и C2 резонируют на одной частоте: её станция остаётся, остальные слабеют. Вращаете C2 — ищете станцию на средних волнах.</p>
+      </div>
+      <div class="plate">
+        <h3>3. Детектор</h3>
+        <p>VD1 пропускает только одну полуволну, а C3 сглаживает радиочастоту. Остаётся огибающая — звук, ехавший на волне, и постоянная составляющая.</p>
+      </div>
+      <div class="plate">
+        <h3>4. Громкость</h3>
+        <p>R1 берёт нужную долю звука, C4 не пускает дальше постоянную составляющую — иначе она сдвинула бы режим VT1.</p>
+      </div>
+      <div class="plate">
+        <h3>5. Усиление напряжения</h3>
+        <p>VT1 увеличивает милливольты примерно в 90 раз. R2 и R3 задают режим, R5 его стабилизирует, C5 возвращает усиление звуку.</p>
+      </div>
+      <div class="plate">
+        <h3>6. Наушник</h3>
+        <p>VT2 напряжения не добавляет, зато даёт ток: без него наушник на 32–64 Ом «посадил» бы первый каскад. C6 пропускает в BF1 только звук.</p>
+      </div>
+    </div>
+    <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+      <a class="btn phosphor" href="../../files/receiver-ru.pdf">Приёмник в PDF</a>
+      <a class="btn ghost" style="color:#1C1D26;box-shadow:inset 0 0 0 1px #C9C9D6" href="../../files/receiver-ru.zip" download>Файл .opir</a>
+    </div>
+  </div>
+</section>
+
+<section class="paper" style="padding-top:0">
   <div class="wrap">
     <div class="head">
       <div class="caps">И ещё</div>
