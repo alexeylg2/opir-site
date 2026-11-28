@@ -6,5 +6,14 @@
     <link>https://opir.dev/</link>
     <language>uk</language>
     <!-- items, newest first -->
+    <item>
+      <title>Opir 1.0.1</title>
+      <pubDate>Sat, 28 Nov 2026 16:39:43 GMT</pubDate>
+      <sparkle:version>378</sparkle:version>
+      <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0.0</sparkle:minimumSystemVersion>
+      <sparkle:releaseNotesLink>https://opir.dev/changelog/</sparkle:releaseNotesLink>
+      <enclosure url="https://github.com/alexeylg2/opir-site/releases/download/v1.0.1/Opir-1.0.1.dmg" sparkle:edSignature="tu8ovlPFjTL8aiJbmtbiiSeQZ2egi6hd/GP274SP7WukXAoc3XiyViTgDF+KZRq8zvZkEQsSCLoSInj7/WY4CA==" length="17900372" type="application/octet-stream"/>
+    </item>
   </channel>
 </rss>
